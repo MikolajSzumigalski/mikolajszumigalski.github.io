@@ -2,7 +2,47 @@
     background-color: #0b215d;
     color: white;
     font-family: 'Cabin', sans-serif;
+    margin: 0;
+}
+
+#logo2{
+    background-size: 50%;    
+}
+
+#violetmenu{
+    height: 40px;
+    width: 100%;
+    background-color: #3a094a;
 }
 h1{
     color: yellow;
 }
+
+body{
+    background-size: cover; 
+}
+
+ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    position:static;
+}
+ul li{
+    float: left;
+    width: 200px;
+    height: 40px;
+    background-color: black;
+    opacity: .8;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+ul li a:hover{
+    background-color: blue;
+    }    
