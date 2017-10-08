@@ -10,31 +10,32 @@
 
 .zajimg {
     width: 60px;
-   float: right;
+	float: left;
+	margin-right: 20px;
 }
 
 .violetborder {
     border: 5px solid #33083a;
-    padding: 5px;
+    padding: 10px;
     margin: 10px;
-    margin-left: 150px;
-    margin-right: 150px;
     border-radius: 5px;
+}
+a, a:hover{
+	text-decoration: none;
+	color: black;
 }
 
 #violetmenu {
     width: 100%;
     background-color: #3a094a;
-    font-size: 30px;
+    font-size: 28px;
     padding: 10px;
     color: white;
     text-align: center;
 }
-
-h1 {
-    color: yellow;
+p, dl{
+	font-size: 110%;
 }
-
 body {
     background-size: cover;
 }
