@@ -1,4 +1,4 @@
-*{
+body{
     background-color: #0b215d;
     color: white;
     font-family: 'Cabin', sans-serif;
@@ -13,6 +13,7 @@
     height: 40px;
     width: 100%;
     background-color: #3a094a;
+    text-align: center;
 }
 h1{
     color: yellow;
@@ -46,3 +47,12 @@ ul li a{
 ul li a:hover{
     background-color: blue;
     }    
+ul li ul li{
+    display: none;
+}
+ul li:hover ul li{
+    display: block;
+}
+h1{
+    padding: 20px;
+}
