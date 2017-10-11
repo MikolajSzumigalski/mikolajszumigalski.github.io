@@ -1,12 +1,30 @@
-
-body{
+* {
+    font-family: 'Cabin', sans-serif;
+    margin: 0;
+}
+.chess{
+    width: 400px;
+    float: right;
+}
+body, html{
     color: white;
     font-family: 'Cabin', sans-serif;
     margin: 0;
-    background-image: url(../img/mainwallpaper.jpg);
-    background-size:100%;
-    background-repeat: no-repeat;
+    background: linear-gradient(black, blue);
+    background-repeat:no-repeat;
     width: 100%;
+    min-height: 100%;
+
+}
+.volley{
+    float: right;
+    padding-left: 15px;
+    width: 130px;
+}
+.chris{
+    float: left;
+    padding-right: 15px;
+    width: 100px;
 }
 
 #logo2{
@@ -20,24 +38,20 @@ body{
     padding: 10px;
     position: static;
 }
-h1{
+h1, h3{
     color: yellow;
-}
-
-body{
-    background-size: cover; 
 }
 
 ul{
     margin: 0px;
     padding: 0px;
     list-style: none;
-    
+    background-color: black;
 }
 ul li{
-    float: right;
+    float: left;
     min-width: 200px;
-    width: 20%;
+    width: 200px;
     height: 40px;
     background-color: black;
     opacity: .8;
@@ -51,8 +65,9 @@ ul li a{
     display: block;
 }
 ul li a:hover{
-    background-color: yellow;
+    background-color: darkblue;
     text-decoration: none;
+    color: white;
     }    
 ul li ul li{
     display: none;
@@ -63,4 +78,11 @@ ul li:hover ul li{
 }
 h1{
     padding: 20px;
+}
+p{
+ font-size: 120%;   
+}
+a{
+    text-decoration: none;
+    color: black;
 }
