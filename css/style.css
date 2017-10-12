@@ -2,6 +2,9 @@
     font-family: 'Cabin', sans-serif;
     margin: 0;
 }
+.tlo{
+    margin: 0 auto;
+}
 .chess{
     width: 400px;
     float: right;
