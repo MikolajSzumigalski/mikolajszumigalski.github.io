@@ -36,6 +36,9 @@ a, a:hover{
 p, dl{
 	font-size: 110%;
 }
+br{
+    line-height: 200%;
+}
 body {
     background-size: cover;
 }
