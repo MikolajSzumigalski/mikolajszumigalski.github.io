@@ -41,9 +41,15 @@
         </p>
         <h3>Początki z GitHubem i GITem</h3>
         <p>
-            1. Na początek, rejestrujemy się na <a href="https://github.com/">Githubie</a><br /> 2. Tworzymy repozytorium (czyli miejsce przechowywania plików projektu). Nazwijmy je "TEST" <br /> 3. Kopiujemy <b>adres naszego repozytorium</b> <br />
-            <img class="img-responsive" src="/img/gitclone.png" /><br /> 4. Włączamy konsolę GIT'a czyli szukamy na komputerze programu GIT BASH <br /> 5. <a href="bash.html">Przechodzimy do folderu</a> do którego chcemy pobrać nasze repozytorium i wpisujemy komendę <kbd>git clone <i>skopiowany adres naszego repozytorium</i></kbd>, to polecenie utworzy katalog o nazwie naszego repozytorium i ściągnie do niego wszystkie jego pliki.<br />
-            <img class="img-responsive" src="/img/git1.png" /><br /> 6. Fazy plików w pracy z GITem <br />
+            1. Na początek, rejestrujemy się na <a href="https://github.com/">Githubie</a><br /> 
+            2. Tworzymy repozytorium (czyli miejsce przechowywania plików projektu). Nazwijmy je "TEST" <br /> 
+            3. Kopiujemy <b>adres naszego repozytorium</b> <br />
+            <img class="img-responsive" src="/img/gitclone.png" /><br /> 
+            4. Włączamy konsolę GIT'a czyli szukamy na komputerze programu GIT BASH <br /> 
+            5. Tworzymy repozytorium lokalne poleceniem <kbd>git init</kbd> <br /> 
+            6. <a href="bash.html">Przechodzimy do folderu</a> do którego chcemy pobrać nasze repozytorium i wpisujemy komendę <kbd>git clone <i>skopiowany adres naszego repozytorium</i></kbd>, to polecenie utworzy katalog o nazwie naszego repozytorium i ściągnie do niego wszystkie jego pliki.<br />
+            <img class="img-responsive" src="/img/git1.png" /><br /> 
+            7. Fazy plików w pracy z GITem <br />
             <img class="img-responsive" src="/img/fazy.png" /><br />
             <b>a)Working directory</b> - katalog na naszym komputerze. W tej fazie po prostu tworzymy plik i umieszczamy go w folderze z naszym projektem w celu wysłania go do <b>lokalnego repozytorium</b><br />
             <b>b)Staging area</b> - Miejsce przejściowe między katalogiem a reozytorium lokalnym. Aby przenieść tutaj plik należy użyć polecenia <kbd>git add <i>nazwa pliku</i></kbd>. Jeśli chcemy dodać od razu wszystkie nowe pliki naraz używamy polecenia <kbd>git add -A</kbd>. Skąd wiemy co znajduje się w staging area? Wystarczy wpisać polecenie <kbd>git status</kbd>. Te pliki, które są w staging area wyświetlą się na zielono. <br />
@@ -52,8 +58,7 @@
         </p>
         <h3>Kilka dodatkowych poleceń dla chętnych (lub gdy komuś coś przez przypadek nie działa)</h3>
         <p>
-            1.<kbd>git pull</kbd> pobieranie kodu z repozytorium. Jeśli już raz pobraliśmy repozytorium, ale ktoś inny wprowadził zmiany w plikach na serwerze, wtedy to polecenia zaktualizuje nasz folder (pamiętać, aby wykonać w folderze z naszym repozytorium lokalnym!) <br /> 2. Cofnięcie <kbd>git add</kbd>. Jeśli dodamy plik do staging area, ale stwierdzimy, że jednak nie chcemy go przenosić do repozytorium używamy do tego polecenia <kbd>git reset HEAD <i>"nazwa pliku"</i></kbd>. <br />
-            3. Dodanie czegoś do już istniejącego commita. Użyliśmy polecenia <kbd>git commit</kbd>. Jednak uznaliśmy, że do niego chcemy dodać jeszcze jakiś plik. Dodajemy więc ten plik go staging area przez <kbd>git add "nazwa pliku"</kbd>, a potem <kbd>git commit --amend</kbd>, możemy też zmienić opis commita <kbd>git commit --amend -m "nowy opis"</kbd>
+            1.<kbd>git pull</kbd> pobieranie kodu z repozytorium. Jeśli już raz pobraliśmy repozytorium, ale ktoś inny wprowadził zmiany w plikach na serwerze, wtedy to polecenia zaktualizuje nasz folder (pamiętać, aby wykonać w folderze z naszym repozytorium lokalnym!) <br /> 2. Cofnięcie <kbd>git add</kbd>. Jeśli dodamy plik do staging area, ale stwierdzimy, że jednak nie chcemy go przenosić do repozytorium używamy do tego polecenia <kbd>git reset HEAD <i>"nazwa pliku"</i></kbd>. <br /> 3. Dodanie czegoś do już istniejącego commita. Użyliśmy polecenia <kbd>git commit</kbd>. Jednak uznaliśmy, że do niego chcemy dodać jeszcze jakiś plik. Dodajemy więc ten plik go staging area przez <kbd>git add "nazwa pliku"</kbd>, a potem <kbd>git commit --amend</kbd>, możemy też zmienić opis commita <kbd>git commit --amend -m "nowy opis"</kbd>
         </p>
     </div>
 
