@@ -46,7 +46,7 @@
             3. Kopiujemy <b>adres naszego repozytorium</b> <br />
             <img class="img-responsive" src="/img/gitclone.png" /><br /> 
             4. Włączamy konsolę GIT'a czyli szukamy na komputerze programu GIT BASH <br /> 
-            5. Tworzymy repozytorium lokalne poleceniem <kbd>git init</kbd> <br /> 
+            5. Tworzymy repozytorium lokalne poleceniem <kbd>git init</kbd>, a następnie ustawiamy użytkownika za pomocą dwóch poleceń <kbd>git config --global user.name "your-username"</kbd> i <kbd>git config --global user.email your@mail.com</kbd> . Robimy to po to, aby było wiadomo, kto wrzuca z komputera pliki. <br /> 
             6. <a href="bash.html">Przechodzimy do folderu</a> do którego chcemy pobrać nasze repozytorium i wpisujemy komendę <kbd>git clone <i>skopiowany adres naszego repozytorium</i></kbd>, to polecenie utworzy katalog o nazwie naszego repozytorium i ściągnie do niego wszystkie jego pliki.<br />
             <img class="img-responsive" src="/img/git1.png" /><br /> 
             7. Fazy plików w pracy z GITem <br />
@@ -58,7 +58,28 @@
         </p>
         <h3>Kilka dodatkowych poleceń dla chętnych (lub gdy komuś coś przez przypadek nie działa)</h3>
         <p>
-            1.<kbd>git pull</kbd> pobieranie kodu z repozytorium. Jeśli już raz pobraliśmy repozytorium, ale ktoś inny wprowadził zmiany w plikach na serwerze, wtedy to polecenia zaktualizuje nasz folder (pamiętać, aby wykonać w folderze z naszym repozytorium lokalnym!) <br /> 2. Cofnięcie <kbd>git add</kbd>. Jeśli dodamy plik do staging area, ale stwierdzimy, że jednak nie chcemy go przenosić do repozytorium używamy do tego polecenia <kbd>git reset HEAD <i>"nazwa pliku"</i></kbd>. <br /> 3. Dodanie czegoś do już istniejącego commita. Użyliśmy polecenia <kbd>git commit</kbd>. Jednak uznaliśmy, że do niego chcemy dodać jeszcze jakiś plik. Dodajemy więc ten plik go staging area przez <kbd>git add "nazwa pliku"</kbd>, a potem <kbd>git commit --amend</kbd>, możemy też zmienić opis commita <kbd>git commit --amend -m "nowy opis"</kbd>
+            1.<kbd>git pull</kbd> pobieranie kodu z repozytorium. Jeśli już raz pobraliśmy repozytorium, ale ktoś inny wprowadził zmiany w plikach na serwerze, wtedy to polecenia zaktualizuje nasz folder (pamiętać, aby wykonać w folderze z naszym repozytorium lokalnym!) <br /> 2. Cofnięcie <kbd>git add</kbd>. Jeśli dodamy plik do staging area, ale stwierdzimy, że jednak nie chcemy go przenosić do repozytorium używamy do tego polecenia <kbd>git reset HEAD <i>"nazwa pliku"</i></kbd>. <br /> 3. Dodanie czegoś do już istniejącego commita. Użyliśmy polecenia <kbd>git commit</kbd>. Jednak uznaliśmy, że do niego chcemy dodać jeszcze jakiś plik. Dodajemy więc ten plik go staging area przez <kbd>git add "nazwa pliku"</kbd>, a potem <kbd>git commit --amend</kbd>, możemy też zmienić opis commita <kbd>git commit --amend -m "nowy opis"</kbd><br />
+            4. Polecenie <kbd>git log</kbd> pokazuje nam listę zmian które wprowadziliśmy do repozytorium
+        </p>
+        
+        <h3>Ćwiczenia (Proszę wszystkie czynności robić w konsoli chyba że jest napisane inaczej) </h3>
+        <p>
+            1. Odpalamy konsolę, wchodzimy do katalogu z naszym repozytorium <br />
+            2. Rejestrujemy użytkownika (jeśli nie zrobiliśmy tego wcześniej) <br />
+            3. Pobieramy dane z repozytorium (teoretyznie oczywiście, bo w praktyce nic tam nie ma) <br />
+            4. Tworzymy katalog o nazwie "testdir", wchodzimy do niego <br />
+            5. Tworzymy plik o nazwie "test.txt" <br />
+            6. (można poza konsolą) wchodzimy do pliku i wpisujemy tam jakąś treść <br />
+            7. Za pomocą poznanych poleceń wrzucamy wszystko na repozytorium Github'a <br />
+            8. Wchodzimy na Github'a do repozytorium i sprawdzamy czy nasz plik i katalog tam są <br />
+            9. (można poza konsolą) wchodzimy do naszego pliku i zmieniamy treść <br />
+            10. Za pomocą poznanych poleceń wrzucamy wszystko na repozytorium Github'a <br />
+            11. Sprawdzamy zmiany w pliku (wchodzimy do repozytorium -> Insights(wykres słupkowy u góry) -> Network - kliknięcie w kropkę pokaże commit)
+        </p>
+        
+        <h3>Praca domowa</h3>
+        <p>
+            Utworzyć repozytorium o nazwie "Projekt HTML". Link do niego proszę wysłać na <a href="hub.sealcode.org">hub.sealcode.org</a> do Workboardu, i do TASKa "REPOZYTORIA". W repozytorium proszę umieścić jeden plik tekstowy o nazwie "prdom1git.txt". Treść pliku dowolna.
         </p>
     </div>
 
