@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Stylowanie tabeli</title>
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="Stylesheet" type="text/css" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+       <a href="zaj3.html" type="button" class="btn btn-primary">Powrót</a>
+        <h2>Stylowanie tabeli</h2>
+        <table class="table table-bordered" >
+            <thead>
+                <tr>
+                    <th>Nazwa atrybutu</th>
+                    <th>Parametry atrybutu</th>
+                    <th>Opis działania</th>
+                </tr>
+            </thead>
+                <tr>
+                    <th style="vertical-align: middle;"><a href="https://www.w3schools.com/cssref/pr_border-style.asp">border:</a></th>
+                    <td>
+                        - szerokość obramowania w px np. <kbd>3px</kbd><br/>
+                        - styl obramowania np. <kbd>solid (jednolity) | double | dotted(kropkowany) | dashed(kreskowany) | none (wcale)</kbd><br />
+                        - kolor obramowania np. <kbd>yellow | black itd.</kbd>
+                    </td>
+                    <td>Modyfikuje obramowanie tabeli (komórki, lub zestawu komórek)</td>
+                </tr>
+                <tr>
+                    <th style="vertical-align: middle; color: mediumaquamarine"><a href="https://www.w3schools.com/cssref/pr_pos_vertical-align.asp">vertical-align:</a></th>
+                    <td>-posiada wiele wartości, lecz dla nas szczególnie cenna to <kbd>middle</kbd></td>
+                    <td>wyśrodkowanie komórki w pionie</td>
+                </tr>
+                <tr>
+                    <th>width:</th>
+                    <td>-wartość liczbowa w procentach np. 40% (przy table to będzie % szerokości witryny)<br />
+                        -wartość liczbowa w pixelach (np. 30px)
+                    </td>
+                    <td> ustawianie szerokości komórki/tabeli</td>
+                </tr>
+                <tr>
+                    <th>height:</th>
+                    <td>-wartość liczbowa w procentach np. 40% (przy table to będzie % wysokości witryny)<br />
+                        -wartość liczbowa w pixelach (np. 30px)
+                    </td>
+                    <td> ustawianie wysokości komórki/tabeli</td>
+                </tr>
+                <tr>
+                    <th>text-align:</th>
+                    <td><kbd>left | center | right</kbd></td>
+                    <td> ustawienie tekstu w komórce - po lewej części, po prawej, lub na środku</td>                 
+                </tr>
+                <tr>
+                    <th><a href="https://www.w3schools.com/cssref/css_colors.asp">color:</a></th>
+                    <td><kbd>red | green | blue | mediumaquamarine </kbd></td>
+                    <td>kolor tekstu</td>
+                </tr>
+                <tr>
+                    <th>background-color:</th>
+                    <td><kbd>red | green | blue | mediumaquamarine </kbd></td>
+                    <td>kolor tła komórki/tabeli</td>
+                </tr>
+                <tr>
+                    <th>
+                        <a href="https://www.w3schools.com/css/css_padding.asp">padding:</a> <br /> 
+                    padding-top: <br /> 
+                    padding-bottom: <br />
+                    padding-left: <br />
+                    padding-right: <br />
+                    </th>
+                    <td>wartość liczbowa w pixelach. </td>
+                    <td>ustalamy odległość między wartością komórki a obramowaniem. Dla samego padding ustalamy je dla wszystkich</td>
+                </tr>
+                <tr>
+                    <th><a href="https://websitesetup.org/web-safe-fonts-html-css/">font-family:</a></th>
+                        <td>Arial | Verdana | Helvetica</td>
+                        <td>Ustawianie czcionek</td>
+                </tr>
+            <tr>
+                <th>border-collapse:</th>
+                <td> <kbd>separate | collapse | initial</kbd></td>
+                <td> ustawienie obramowania dla komórek i tabeli, czy ma być wspólne, oddzielne, czy domyślne </td>
+            </tr>
+                
+        </table>
+    </div>
+</body>
+<footer>
+
+</footer>
+
+</html>

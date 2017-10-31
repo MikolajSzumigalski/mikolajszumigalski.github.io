@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Warsztaty Sealcode</title>
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="Stylesheet" type="text/css" href="css/sealcode.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div id="violetmenu"><img id="logo2" src="img/logo2.png" />
+            <h1>WARSZTATY WEBOWE Mikołaj Szumigalski</h1>
+        </div>
+        <br />
+        <a href="mainwarsztaty.html" type="button" class="btn btn-primary">Powrót</a>
+        <h1>Zajęcia 3</h1>
+        <p>
+            Link do pobrania prezentacji z zajęć nr 3: <a href="slajdy/Szumi%20Sealcode%202%20GIT.pptx">Prezentacja 2</a>
+        </p>
+        <h2>1.Wstęp do HTML</h2>
+        <p>
+            Skrót html oznacza <b>H</b>yper<b>t</b>ext <b>M</b>arkup <b>L</b>anguage, czyli hipertekstowy język znaczników: <br />
+            - hipertekstowy - tekst podzielony na niezależne części połączone hiperłączami (czyli nie mamy jednej strony tylko nasza strona jest podzielona na mniejsze podstrony począczone linkami (hiperłączami))<br />
+            -język znaczników - teksty dzielimy, stylujemy itd. za pomocą znaczników - poleceń zmkniętych w nawiasy <>.<br />
+        </p>
+        <h3>1.1 Znacznik</h3>
+        <img class="img-responsive" src="img/znacznikiTerminologia.png"/>
+        <h2>2.Szkielet dokumentu HTML</h2>
+        <img class="img-responsive" src="img/szablon.png"/>
+        <p>
+            Znaczniki <kbd>html, doctype html</kbd> określają nam typ dokumentu jako html'owy. Jak widzimy szkielet składa się z głowy(head) i ciała(body). 
+        </p>
+        <h3>2.1 Head (Głowa)</h3>
+        <p>
+            <b>Ćwiczenie 1</b>
+            Co może (powinno) się znaleźć w tej sekcji? <br />
+            - <br />
+            - <br />
+            - <br /> 
+            <a href="https://www.w3schools.com/tags/tag_meta.asp">*Znacznik meta</a><br />
+            
+            
+        </p>
+        <h3>2.2 Ciało (Body)</h3>
+        <p>
+         W ciele znajduje się główna treść strony. Możemy ją przedstawić na różne sposoby. Może to być zwykły akapit z nagłówkiem, może to być tabela, obrazek, czy film. Znajdują się też linki do innych stron, czy linki do plików np. do pobrania. <br />
+         Na przykładzie widzimy kilka znaczników związanych ze szkieletem strony:</p>
+        <div class="list-group">
+            <li class="list-group-item"><kbd>header</kbd> czyli nagłówek</li>
+            <li class="list-group-item"><kbd>nav</kbd> od navigation, czyli po prostu menu</li>
+            <li class="list-group-item"><kbd>section</kbd> tekst często dzielimy na sekcje, każdą warto umieścić w takim znaczniku</li>
+            <li class="list-group-item"><kbd>article</kbd> artykuł w sekcji</li>
+            <li class="list-group-item"><kbd>aside</kbd> możemy użyć jak się można domyślić np. do utworzenia kolumny bocznej</li>
+        </div>
+        <p>Jednak te znaczniki są znacznikami bardziej grupującymi, same w sobie nie powodują zmiany treści tekstu. To tego, aby tekst rzeczywiście zachowywał się w taki sposób należy użyć stylowania tych znaczników.</p>
+        <p>Są również przydatne znaczniki, które same w sobie zmieniają wygląd treści. Są to m. in.</p>
+         <div class="list-group">
+            <li class="list-group-item"><kbd>b</kbd> pogrubienie tekstu</li>
+            <li class="list-group-item"><kbd>i</kbd> kursywa</li>
+            <li class="list-group-item"><kbd>blockquote</kbd> cytat (tworzy tabulację dla tekstu)</li>
+            <li class="list-group-item"><kbd>u</kbd> podkreślenie</li>
+            <li class="list-group-item"><kbd>br /</kbd> przejście do następnej linii. Ten znacznik jest pojedynczy czyli otwieramy i zamykamy go od razu</li>
+            <li class="list-group-item"><img src="img/komentarz.png"/> komentarz - widoczny tylko w edycji strony</li>
+            <li class="list-group-item"><kbd>h1</kbd><kbd>h2</kbd>...<kbd>h6</kbd> nagłówek - im większy numer tym mniejszy tekst</li>
+        </div>
+        
+        <h3>2.3 Stopka (Footer)</h3>
+        <p>
+            W stopce znajdują się te elementy, które nie są główną treścią strony, ale też może zawierać ważne informacje np o autorze strony. Stopka znajduje się wewnątrz ciała!
+            <b>Ćwiczenie 2</b> 
+            Co jeszcze może (powinno) się znaleźć w tej sekcji? <br />
+            - <br />
+            - <br />
+            - <br /> 
+        </p>
+        <h2>3.Tabele</h2>
+        <p>
+        Tabele tworzymy znacznikiem <kbd>table</kbd>. Wiersz (row) tworzymy za pomocą znacznika <kbd>tr</kbd>, a komórkę tabeli (data) za pomocą <kbd>td</kbd> . Wyjątek stanowią komórki nagłówka tabeli, które robimy za pomocą znacznika <kbd>th</kbd>. <br />
+        </p>
+        <b>Przykład tabeli:</b><br />
+        <div class="row">
+            <div class="col-sm-6"><img class="img-responsive" src="img/table.png" /></div>
+            <div class="col-sm-6"><img class="img-responsive" src="img/table2.png" /></div>
+        </div>
+        <p>Co ciekawe, tabela również może składać się z głowy, ciała i stopki. Służą do tego kolejno znaczniki <kbd>thead</kbd> , <kbd>tbody</kbd> i <kbd>tfoot</kbd> . Co więcej nie musimy podawać tych elementów po kolei, aby wyświetlały się w odpowiedniej kolejności, co pokazuje <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_tbody">ten przykład </a></p>
+        <br />
+        <h3>3.1 Łączenie komórek tabeli</h3>
+        <p>Komórki w poziomie łączymy za pomocą <b>atrybutu</b> <kbd>colspan="x"</kbd> (column span) gdzie x to ilość komórek, które łączymy w jedną. Analogicznie komórki w pionie łączymy za pomocą <b>atrybutu</b> <kbd>rowspan="x"</kbd> . Należy pamiętać że ten atrybut przypisujemy znacznikowi <kbd>td</kbd> ( lub <kbd>th</kbd> ), a nie np. <kbd>table</kbd> , ponieważ odnosi się tylko do tej konkretnej komórki.<br /> 
+        <b>Pytanie:</b> A co jeśli użyjemy colspan ="2"  i rowspan="2" jednocześnie? Wtedy będziemy mieć komórkę wielkości trzech czy czterech komórek? A może nie wolno łączyć i wybuchnie? </p>
+        <h3>3.2 Stylowanie tabeli</h3>
+        <p>
+            <b>Znacznik style</b><br />
+            Aby stylować tabelę i jej elementy wyprzedzimy trochę temat stylowania. Stylowanie będzie się odbywać wewnątrz znacznika <kbd>head</kbd> w którym musimy umieścić inny: <kbd>style</kbd> . Wewnątrz znacznika style postępujemy wg takiego schematu:<br />
+             <img class="img-responsive" src="img/table3.png" /><br />
+            Jak widać najpierw podajemy nazwę znacznika, a potem w nawiasach klamrowych wypisujemy jego atrybuty i po dwukropku wartości atrybutów. Stylować możemy wszystkie znaczniki, nie tylko te z przykładu. Tu widać też kolejną zaletę <kbd>thead</kbd> , ponieważ pozwala ona np. pokolorować sam nagłowek na jeden kolor, lub obramować go.
+        </p>
+        <h3><a href="stylowanieTabeli.html">Kliknij, aby obejrzeć tabelę stylowania</a></h3>
+        <h3>Ćwiczenie: spróbuj odtworzyć podane poniżej tabele</h3>
+        <div class="row">
+            <div class="col-sm-6"><img class="img-responsive" src="img/tableexp1.png" /></div>
+            <div class="col-sm-6"><img class="img-responsive" src="img/tableexp2.png" /></div>
+        </div>
+        <h2>4. Listy</h2>
+        <p>
+            W zależności czy chcemy listę numerowaną (ordered list), czy nienumerowaną (unordered list) używamy odpowiednio znaczników <kbd>ol</kbd> i <kbd>ul</kbd> . Wewnątrz listy jej elementy powinny znajdować się w znaczniku <kbd>li</kbd> (list index).
+            Na przykładzie wygląda to następująco:
+        </p>
+            <img class="img-responsive" src="img/listy.png" />
+        <h3>4.1 Listy nienumerowane</h3>
+        <p>Elementy listy nienumerowanej wcale nie muszą się zaczynać kropką. Możymy nadać atrybut <kbd>list-style-type:</kbd> znacznikowi <kbd>ul</kbd> . Możliwe wartości tego atrybutu: <br />
+            <kbd>disc</kbd> kułeczka zamalowane <br />
+            <kbd>circle</kbd> kułeczka niezamalowane <br />
+            <kbd>square</kbd> kwadraciki <br />
+            <kbd>none</kbd> nic <br />
+         </p>
+        <img class="img-responsive" src="img/rodzajeul.png" />
+        <h3>4.2 Listy numerowane</h3>
+        <p>Elementy listy numerowanej również nie muszą być oznaczane cyframi. Możymy nadać atrybut <kbd>type:</kbd> znacznikowi <kbd>ol</kbd> . Możliwe wartości tego atrybutu: <br />
+            <kbd>"1"</kbd> cyferki <br />
+            <kbd>"A"</kbd> wielkie litery alfabetu łacińskiego <br />
+            <kbd>"a"</kbd> małe litery alfabetu łacińskiego <br />
+            <kbd>"I"</kbd> wielkie cyfry rzymskie <br />
+            <kbd>"i"</kbd> małe cyfry rzymskie <br />
+         </p>
+        <img class="img-responsive" src="img/rodzajeul.png" />
+               
+            
+
+        <h3>Praca domowa</h3>
+        <p>Tworzymy dokument html, który posiada:
+        -nagłówek, ciało i stopkę (w nagłówku tytuł strony i kodowanie UTF-8) <br />
+        -listę numerowaną, a w niej zagnieżdżoną listę nienumerowaną <br />
+        -tabelę, która posiada obramowanie, kolorowy nagłówek, ciało i stopkę <br />
+        -nagłówek, 3 akapity dowolnego tekstu i stopkę z informacją o autorze strony <br />
+        -elementy powinny być skomentowane <br />
+        Gotowy dokument proszę umieścić w repozytorium Github do końca tej soboty <br />
+        </p>
+   <br />
+   <br />
+    </div>
+
+</body>
+<footer>
+autor strony: Mikołaj Szumigalski 
+</footer>
+
+</html>
