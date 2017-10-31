@@ -54,7 +54,7 @@
             <b>a)Working directory</b> - katalog na naszym komputerze. W tej fazie po prostu tworzymy plik i umieszczamy go w folderze z naszym projektem w celu wysłania go do <b>lokalnego repozytorium</b><br />
             <b>b)Staging area</b> - Miejsce przejściowe między katalogiem a reozytorium lokalnym. Aby przenieść tutaj plik należy użyć polecenia <kbd>git add <i>nazwa pliku</i></kbd>. Jeśli chcemy dodać od razu wszystkie nowe pliki naraz używamy polecenia <kbd>git add -A</kbd>. Skąd wiemy co znajduje się w staging area? Wystarczy wpisać polecenie <kbd>git status</kbd>. Te pliki, które są w staging area wyświetlą się na zielono. <br />
             <b>c)Git repository</b> - gdy jesteśmy już pewni, że chcemy przenieść pliki do repozytorium tworzymy tzw. commit. Odbywa się to za pomocą polecenia <kbd>git commit -m "opis commita"</kbd>. Dlaczego warto dodawać opis commita? Łatwiej wtedy dotrzeć do starszych plików, przypomina nam w jakej fazie był nasz projekt przy każdym commicie. <br />
-            <b>d)Przenosiny na serwer na Githubie</b> - Na razie nasze pliki są w repozytorium lokalnym, czyli dalej na naszym komputerze. Chcemy, aby pojawiły się na serwerze na Githubie. Do tego służy polecenie <kbd>git push</kbd>.
+            <b>d)Przenosiny na serwer na Githubie</b> - Na razie nasze pliki są w repozytorium lokalnym, czyli dalej na naszym komputerze. Chcemy, aby pojawiły się na serwerze na Githubie. Najpierw używamy komendy <kbd>git remote add origin "adres naszego repozytorium"</kbd> , a na koniec polecenie <kbd>git push -u origin master</kbd>.
         </p>
         <h3>Kilka dodatkowych poleceń dla chętnych (lub gdy komuś coś przez przypadek nie działa)</h3>
         <p>
