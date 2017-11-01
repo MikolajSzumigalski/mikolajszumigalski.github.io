@@ -62,13 +62,15 @@
             <li class="list-group-item"><kbd>article</kbd> artykuł w sekcji</li>
             <li class="list-group-item"><kbd>aside</kbd> możemy użyć jak się można domyślić np. do utworzenia kolumny bocznej</li>
         </div>
-        <p>Jednak te znaczniki są znacznikami bardziej grupującymi, same w sobie nie powodują zmiany treści tekstu. To tego, aby tekst rzeczywiście zachowywał się w taki sposób należy użyć stylowania tych znaczników.</p>
-        <p>Są również przydatne znaczniki, które same w sobie zmieniają wygląd treści. Są to m. in.</p>
+        <p>Jednak te znaczniki są znacznikami bardziej grupującymi (nazywa się je <b>strukturalnymi</b>), same w sobie nie powodują zmiany treści tekstu. To tego, aby tekst rzeczywiście zachowywał się w taki sposób należy użyć stylowania tych znaczników.</p>
+        <p>Są również przydatne znaczniki, które same w sobie zmieniają wygląd treści (tzw. znaczniki <b>semantyczne</b>). Są to m. in.</p>
          <div class="list-group">
             <li class="list-group-item"><kbd>b</kbd> pogrubienie tekstu</li>
             <li class="list-group-item"><kbd>i</kbd> kursywa</li>
             <li class="list-group-item"><kbd>blockquote</kbd> cytat (tworzy tabulację dla tekstu)</li>
             <li class="list-group-item"><kbd>u</kbd> podkreślenie</li>
+            <li class="list-group-item"><kbd>p</kbd> akapit</li>
+             <li class="list-group-item"><kbd>a</kbd> odnośnik, posiada atrybut <b>href</b> w którym podajemy miejsce do któego ma odnośnik odsyłać</li>
             <li class="list-group-item"><kbd>br /</kbd> przejście do następnej linii. Ten znacznik jest pojedynczy czyli otwieramy i zamykamy go od razu</li>
             <li class="list-group-item"><img src="img/komentarz.png"/> komentarz - widoczny tylko w edycji strony</li>
             <li class="list-group-item"><kbd>h1</kbd><kbd>h2</kbd>...<kbd>h6</kbd> nagłówek - im większy numer tym mniejszy tekst</li>
@@ -97,19 +99,15 @@
         <h3>3.1 Łączenie komórek tabeli</h3>
         <p>Komórki w poziomie łączymy za pomocą <b>atrybutu</b> <kbd>colspan="x"</kbd> (column span) gdzie x to ilość komórek, które łączymy w jedną. Analogicznie komórki w pionie łączymy za pomocą <b>atrybutu</b> <kbd>rowspan="x"</kbd> . Należy pamiętać że ten atrybut przypisujemy znacznikowi <kbd>td</kbd> ( lub <kbd>th</kbd> ), a nie np. <kbd>table</kbd> , ponieważ odnosi się tylko do tej konkretnej komórki.<br /> 
         <b>Pytanie:</b> A co jeśli użyjemy colspan ="2"  i rowspan="2" jednocześnie? Wtedy będziemy mieć komórkę wielkości trzech czy czterech komórek? A może nie wolno łączyć i wybuchnie? </p>
-        <h3>3.2 Stylowanie tabeli</h3>
-        <p>
-            <b>Znacznik style</b><br />
-            Aby stylować tabelę i jej elementy wyprzedzimy trochę temat stylowania. Stylowanie będzie się odbywać wewnątrz znacznika <kbd>head</kbd> w którym musimy umieścić inny: <kbd>style</kbd> . Wewnątrz znacznika style postępujemy wg takiego schematu:<br />
-             <img class="img-responsive" src="img/table3.png" /><br />
-            Jak widać najpierw podajemy nazwę znacznika, a potem w nawiasach klamrowych wypisujemy jego atrybuty i po dwukropku wartości atrybutów. Stylować możemy wszystkie znaczniki, nie tylko te z przykładu. Tu widać też kolejną zaletę <kbd>thead</kbd> , ponieważ pozwala ona np. pokolorować sam nagłowek na jeden kolor, lub obramować go.
-        </p>
-        <h3><a href="stylowanieTabeli.html">Kliknij, aby obejrzeć tabelę stylowania</a></h3>
-        <h3>Ćwiczenie: spróbuj odtworzyć podane poniżej tabele</h3>
-        <div class="row">
-            <div class="col-sm-6"><img class="img-responsive" src="img/tableexp1.png" /></div>
-            <div class="col-sm-6"><img class="img-responsive" src="img/tableexp2.png" /></div>
-        </div>
+        <h3>3.2 Obramowanie</h3>
+        <p>Aby dodać obramowanie do tabeli należy użyć atrybutu <kbd>border="x"</kbd> gdzie x to grubość tabeli w pixelach. </p>
+        <h3>3.3 Odległość komórek od siebie</h3>
+        <p>Atrybut <kbd>cellspacing="x"</kbd> pozwala nam ustalić odległość (wartość x w pixelach) między sąsiadującymi komórkami</p>
+        <h3>3.3 Odległość między wartością komórki a brzegiem</h3>
+        <p>Atrybut <kbd>cellpadding="x"</kbd> pozwala nam ustalić odległość (wartość x w pixelach) między wartością komórki a brzegiem</p>
+        <h3><b>Ćwiczenie</b></h3>
+        <p>Proszę stworzyć tabelę aby wyglądała tak jak na obrazku poniżej. Proszę, aby w kodzie znalazły się znaczniki <kbd>thead</kbd>, <kbd>tbody</kbd> i <kbd>tfoot</kbd>, oraz znacznik <kbd>th</kbd>. Pozostałych znaczników można używać wedle uznania, byle efekt był dobry.</p>
+        <img class="img-responsive" src="img/tabelacw.png" />
         <h2>4. Listy</h2>
         <p>
             W zależności czy chcemy listę numerowaną (ordered list), czy nienumerowaną (unordered list) używamy odpowiednio znaczników <kbd>ol</kbd> i <kbd>ul</kbd> . Wewnątrz listy jej elementy powinny znajdować się w znaczniku <kbd>li</kbd> (list index).
@@ -133,18 +131,26 @@
             <kbd>"i"</kbd> małe cyfry rzymskie <br />
          </p>
         <img class="img-responsive" src="img/rodzajeul.png" />
-               
-            
-
+        <h3>4.3 Lista definicji</h3>  
+        <p>Ten rodzaj list trochę różni się charakterem od poprzenich list i na pewno wykorzystaniem. Tutaj zaczynamy tworzenie listy od znacznika <kbd>dl</kbd> (description list czyli taki słownik pojęć w polskim rozumieniu). Każde pojęcie będzie się składało z pojęcia (lub kilku) czyli znacznika <kbd>dt</kbd> (term), oraz opisu <kbd>dd</kbd> (description). Na przykładzie wygląda to tak: </p>  
+        <img class="img-responsive" src="img/tabelacw3.png" />   
+        <h3>4.4 Zagnieżdżanie list</h3>
+        <p>Nic nie stoi na przeszkodzie aby stworzyć jedną listę w innej liście. Wystarczy odpowiednio używać znaczników. Przykład takiego zagnieżdżenia poniżej.</p>    
+         <img class="img-responsive" src="img/tabelacw2.png" />
+        <h3><b>Ćwiczenie:</b></h3>
+        <p>Proszę o wykonanie listy numerowanej (jako indeksy wielkie cyfry rzymskie). Niech posiada 6 elementów. W dwóch z nich proszę zagnieździć listy - jedną numerowaną (indeksy mają być małymi literkami alfabetu) i jedną nienumerowaną (indeksy niech będą kwadracikami). Każda z tych list powinna mieć 3 elementy. Dodakowo proszę stworzyć listę pojęć. 2 pojęcia (mają mieć tytuł + krótki opis). Treść dowolna.</p>
         <h3>Praca domowa</h3>
         <p>Tworzymy dokument html, który posiada:
-        -nagłówek, ciało i stopkę (w nagłówku tytuł strony i kodowanie UTF-8) <br />
-        -listę numerowaną, a w niej zagnieżdżoną listę nienumerowaną <br />
-        -tabelę, która posiada obramowanie, kolorowy nagłówek, ciało i stopkę <br />
+        -głowę(w środku tytuł strony i kodowanie UTF-8), ciało i stopkę <br />
         -nagłówek, 3 akapity dowolnego tekstu i stopkę z informacją o autorze strony <br />
-        -elementy powinny być skomentowane <br />
-        Gotowy dokument proszę umieścić w repozytorium Github do końca tej soboty <br />
+        - podkreślenie, pogrubienie, blok cytatu i link <br />
+        -listę numerowaną, a w niej zagnieżdżoną listę nienumerowaną <br />
+        -tabelę, która posiada obramowanie, nagłówek, ciało i stopkę <br />
+        - niektóre elementy powinny być skomentowane (min. 5 komentarzy niech będzie) <br />
+        Gotowy dokument proszę umieścić w repozytorium Github do końca tej soboty (tj. 11.11.17r.) <br />
+        Przykład zrobionej pracy (graficzny widok strony):
         </p>
+        <img class="img-responsive" src="img/pd1.png" />
    <br />
    <br />
     </div>
