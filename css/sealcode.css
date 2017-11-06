@@ -24,7 +24,9 @@ a, a:hover{
 	text-decoration: none;
 	color: black;
 }
-
+li{
+    font-size: 120%;
+}
 #violetmenu {
     width: 100%;
     background-color: #3a094a;

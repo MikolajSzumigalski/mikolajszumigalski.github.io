@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Warsztaty Sealcode</title>
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="Stylesheet" type="text/css" href="css/sealcode.css" />
+</head>
+
+<body>
+    <div class="container">
+       <div id="violetmenu"><img id="logo2" src="img/logo2.png" />
+            <h1>WARSZTATY WEBOWE Mikołaj Szumigalski</h1>
+        </div>
+        <br />
+        <a href="mainwarsztaty.html" type="button" class="btn btn-primary">Powrót</a>
+        <h1>Zajęcia 4</h1>
+        <p>
+            Link do pobrania prezentacji z zajęć nr 4: <a href="slajdy/Szumi%20Sealcode%203%20Budowa%20HTML.pptx">Prezentacja 3</a>
+        </p>
+        <h2>1. Dodawanie obrazów na stronę</h2>
+        <p>Za pomocą znacznika <kbd>img</kbd> możemy dodać obrazek na stronę. Wymaganym do tego atrybutem jest <kbd>src</kbd> (source) w którym musimy podać ścieżkę do naszego obrazka. Jeśli obrazek jest w tym samym katalogu co nasz plik html, wystarczy podać samą nazwę obrazka, jeśli nie podajemy pełną ścieżkę. Możemy również linkować obrazki z internetu. Wystarczy podać w tym miejscu link do niego.</p>
+        <img class="img-responsive" src="img/jaskierobraz1.png"/>
+        <h3>1.1 Przydatne atrybuty znacznika img</h3>
+        <h3>Width i height</h3>
+        <p>
+            Z obrazkiem na stronie możemy zrobić kilka przydatnych rzeczy. Możemy ustalić jego wysokość i szerokość (atrybuty kolejno <kbd>width</kbd> i <kbd>height</kbd>). Ustalenie jednego z tych atrybutów sprawi, że automatycznie drugi przeskaluje się tak, aby stosunek wysokości obrazka do szerokości był zawsze taki sam. Dopiero ustalenie jednocześnie wysokości i szerokości zaburzy tą skalę i obrazek się zniekształci
+        </p>
+        <a href="img/jaskierobraz2.png"><img class="img-responsive" src="img/jaskierobraz2.png"/></a>
+        <h3>Alt</h3>
+        <p>Atrybut <kbd>alt</kbd> to tekst alternatywny, który wyświetla się zamiast obrazka na stronie. Warto w tym miejscu krótko napisać co obrazek przedstawia. Jest to nie tylko przydatne gdy np. obrazek jest źle podlinkowany, czy gdy przypadkowo go usuniemy z folderu, ale również może pomagać niewidomym którzy za pomocą specjalnych programów odczytują właśnie atrybut alt przy przeglądaniu stron z obrazkami. </p>
+        <h3>Usemap</h3>
+        <p>
+            Atrybut wykorzystujący ciekawy znacznik <kbd>map</kbd>. Za jego pomocą możemy podzielić obrazek na obszary, z których każdy jest osobnym linkiem. Obszar może mieć kształt czworokąta, lub okręgu. Oprócz obrazka poniżej świetny przykład można znaleźć <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_images_map2">tutaj</a> . Atrybut <kbd>shape</kbd> wyznacza kształt naszego pola (<kbd>rect</kbd> - czworokąt, <kbd>circle</kbd> - okrąg). Dodatkowo pole zajmowane przez każdy z "wycinków" określamy atrybutem <kbd>coords</kbd> . Przy czworokącie atrybut posiada cztery wartości - pierwsze dwie to koordynaty lewego górnego wierzchołka, a pozostałe to koordynaty prawego dolnego. Przy okręgu wartości są 3 - pierwsze dwie to koordynaty środka okręgu, a trzecia to jego promień. 
+        <a href="img/jaskiesize.png"><img class="img-responsive" src="img/jaskiesize.png"/></a>   
+        Oczywiście obrazek przedstawia tylko hipotetyczne pola które po kliknięciu byłyby odnośnikami.  
+        </p>
+        <h2>Atrybuty <b>ID</b> i <b>Class</b></h2>
+        <p>Te atrybuty są szególnymi, ponieważ możemy je nadać praktycznie prawie wszystkim znacznikom. Ich wartość ustalamy sami, powiniem być to jakiś wyraz najlepiej. Do czego służy taki atrybut? Głównie do stylowania elementu. Różnica jest taka, że może być w dokumencie tylko jeden znacznik o danej wartości atrybutu przy atrybucie <kbd>id</kbd> zaś przy atrybucie <kbd>class</kbd> może być kilka znaczników o tej samej wartości tego atrybutu</p>
+    </div>
+</body>
+
+</html>
