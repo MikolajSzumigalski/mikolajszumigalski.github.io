@@ -25,7 +25,7 @@
         <a href="mainwarsztaty.html" type="button" class="btn btn-primary">Powrót</a>
         <h1>Zajęcia 4</h1>
         <p>
-            Link do pobrania prezentacji z zajęć nr 4: <a href="slajdy/Szumi%20Sealcode%203%20Budowa%20HTML.pptx">Prezentacja 3</a>
+            Link do pobrania prezentacji z zajęć nr 4: <a href="slajdy/Szumi%20Sealcode%204%20HTML.pptx">Prezentacja 4</a>
         </p>
         <h2>1. Dodawanie obrazów na stronę</h2>
         <p>Za pomocą znacznika <kbd>img</kbd> możemy dodać obrazek na stronę. Wymaganym do tego atrybutem jest <kbd>src</kbd> (source) w którym musimy podać ścieżkę do naszego obrazka. Jeśli obrazek jest w tym samym katalogu co nasz plik html, wystarczy podać samą nazwę obrazka, jeśli nie podajemy pełną ścieżkę. Możemy również linkować obrazki z internetu. Wystarczy podać w tym miejscu link do niego.</p>
@@ -49,13 +49,84 @@
         <h3>2.1 Atrybuty <b>ID</b> i <b>Class</b></h3>
         <p>Te atrybuty są szególnymi, ponieważ możemy je nadać praktycznie prawie wszystkim znacznikom. Ich wartość ustalamy sami, powiniem być to jakiś wyraz najlepiej. Do czego służy taki atrybut? Głównie do stylowania elementu. Różnica jest taka, że może być w dokumencie tylko jeden znacznik o danej wartości atrybutu przy atrybucie <kbd>id</kbd> zaś przy atrybucie <kbd>class</kbd> może być kilka znaczników o tej samej wartości tego atrybutu</p>
         <img class="img-responsive" src="img/classid.png"/>
-        <h3>Elementy liniowe i blokowe</h3>
+        <h3>2.2 Elementy liniowe i blokowe</h3>
         <p>Bardzo ważna kwestia o której warto pamętać przy pisaniu kodu. Przypatrzmy się podanemu przykładowi:</p>
         <a href="img/bloklinia.png"><img class="img-responsive" src="img/bloklinia.png"/></a>
         <p>Na samym początku warto przypomnieć, że użyty w pliku html Enter nie będzie egzekwowany w widoku witryny. Widać to na przykładzie:</p>
         <img class="img-responsive" src="img/brprzyklad.png"/>
         <p>Wracając co wcześniejszego przykładu zróćmy uwagę na układ naszych elementów. Mamy po 3 elementy zawarte w konkretny znacznik i ich układ na stronie się różni. Znacznik <kbd>p</kbd> przesówa następny element do nowej linii z odstępem, znacznik <kbd>div</kbd> podobnie jak p, ale bez odstępu, a elementy w znacznikach <kbd>span</kbd> i <kbd>a</kbd> wyświetlają się koło siebie.</p>
         <p>Elementy wyświetlające się koło siebie nazywamy elementami <b>liniowymi</b> (bo wyświetlają się w 1 linii). Elementy, które wyświetlają się w osobnych liniach nazywamy <b>blokowymi</b></p>
+        <h3>Ćwiczenie 1</h3>
+        <p>Które ze znaczników, które już poznaliśmy mogą być uznane za blokowe?</p>
+        - <br>
+        - <br>
+        - <br>
+        <p>A które za liniowe?</p>
+        - <br>
+        - <br>
+        - <br>
+        <h3>2.3 Znaczniki <b>div</b> i <b>span</b></h3>
+        <p>W przykładzie o el. blokowych i liniowych pojawiły się 2 nowe znaczniki - <kbd>div</kbd> i <kbd>span</kbd> . Do czego służą? Mają do siebie bardzo podobne znaczenie, są do... wszystkiego. I do niczego tak naprawdę. Gdy chcemy naszą treść wrzucić do jakiegoś znacznika i ostylować, ale nie mamy pomysłu jakiego użyć, wtedy używamy właśnie ich. To typowe elementy, których zadaniem jest pogrupowanie elementów, a my nadajemy im atrybut class, lub id w celu ostylowania. Różnią się jedynie tym, że div jest el. blokowym, a span liniowym (co ciekawe, za pomocą stylów, można sprawić, że div będzie el. liniowym, a span blokowym! tylko po co...)</p>
+        <h2>2.4 Znaki specjalne</h2>
+        <p>
+            Zapewne wielu z Was wie czym jest kodowanie znaków w komputerze (wspomniałem o tym na poprzednich zajęciach). W HTML'u oprócz znaków z klawiatury możemy użyć też tzw. <b>znaków specjalnych</b>. Do takowych należą np. &Delta; &Sigma; &clubs; &copy; . Jak je tworzymy? Są na to 3 sposoby: <br />
+            - <kbd>&nazwaznaku;</kbd>  zaczynamy od &amp; i kończymy na ;, w środku nazwa znaku <br />
+            - <kbd>&amp;#liczbadziesiętna;</kbd> zamiast nazwy znaku podajemy jego kod dziesiętny  <br />
+            - <kbd>&amp;#xliczbadziesiętna;</kbd> zamiast nazwy znaku podajemy jego kod szesnastkowy  <br />
+        </p>
+        <p>Co ciekawe kody które wprowadzamy są kodami HTML'a czyli bez względu na to czy korzystamy z kodowania UTF-8 czy innego zawsze będą się wyświetlać te same znaki. Tabele z symbolami możecie znaleźć <b><a href="https://www.w3schools.com/charsets/ref_html_symbols.asp">tutaj</a></b>. Trochę skromniejszą wersję z opisem po polsku możecie znaleźć <a href="http://www.poradnik-webmastera.com/artykuly/html/znaki_specjalne_html.php"><b>tu</b></a> </p>
+        <h2>3 Dodawanie filmów do strony</h2>
+        <p>Ciężko sobie wyobrazić dzisiejszy internet bez filmów. Jak możemy łatwo dodać film na stronę? Za pomocą znacznika <kbd>video</kbd>. Znacznik ten posiada kilka przydatnych atrybutów: <br />
+            - <kbd>width</kbd> i <kbd>height</kbd> używamy tak jak w obrazkach do ustalenia szerokości i wysokości ekranika <br />
+            -<kbd>autoplay</kbd> filmik odpala się sam bez ingerencji użytkownika
+            -<kbd>loop</kbd> filmik jest zapętlony <br />
+            -<kbd>muted</kbd> filmik jest wyciszony <br />
+            -<kbd>poster="ścieżka do miniaturki"</kbd> możemy filmikowi ustalić miniaturkę <br />
+            -<kbd>controls</kbd> dodaje kontrolki dzięki którym użytkownik może film przewijać, ustalać dźwięk, pauzować, odtwarzać, fullscreen itd.<br />
+            Wewnątrz znacznika video umieszczamy znacznik <kbd>source</kbd> wewnątrz którego mamy 2 atrybuty: <kbd>src="ścieżka do filmu"</kbd> gdzie podajemy ścieżkę do filmu, oraz <kbd>type="typ video"</kbd> gdzie dostępnymi typami filmów są: video/mp4, video/ogg, video/webm . <br />
+            Do poćwiczenia wrzucania filmów polecam np. <a href="http://www.sample-videos.com/"><b>tą stronkę</b></a> gdzie można ściągnąc pliki video do testowania.     
+           </p>
+           
+           <img class="img-responsive" src="img/filmik.png"/>
+        <video width="320" height="240" controls>
+            <source src="img/samplevideo.mp4" type="video/mp4">
+        </video>
+        <h2>4 Dodawanie muzyki na stronę</h2>
+        <p>Dodawanie muzyki jest bardzo podobne do filmów, znacznik video zastępujemy znacznikiem <kbd>audio</kbd>, który również posiada atrybuty: autoplay, controls, loop, muted. Podobnie jak przy filmach wewnątrz znacznika audio musimy umieścić znacznik source z atrybutami src i type. Muzyka obsługuje 3 formaty zapisu dźwięku: audio/mpeg (w tym pliki mp3), audio/ogg, audio/wav. W poniższym przykładzie również skorzystałem z tej samej strony co przy filmach do pobrania przykłdowego dźwięku (brzmi jak szum, lub zakłócenia ale chyba taki ma być)</p>
+        <img class="img-responsive" src="img/muzyka.png"/>
+        <audio controls>
+              <source src="img/SampleAudio_0.7mb.mp3" type="audio/mpeg">
+        </audio>
+        <h2>5 Ramki</h2>
+        <p>Czasami może zajść taka potrzeba, że chcemy na naszej stronie umieścić nie tylko odnośnik do innej strony, ale nawet... inną stronę. Można to jak najbardziej uczynić za pomocą znacznika <kbd>iframe</kbd>. Wystarczy podobniej jak przy obrazku użyć atrybutu <kbd>src=""</kbd> gdzie podajemy link do strony. Tu również możemy ustalić wielkośc naszego okienka na którym wyświetli się strona za pomocą atrbutów width i height. </p>
+        <img class="img-responsive" src="img/iframe.png"/><br />
+        <iframe src="https://mikolajszumigalski.github.io/mainwarsztaty.html" width="400" height="400"></iframe>
+        <p>Co ciekawe możemy potraktować taką ramkę jak "galerię" stron internetowych. O co chodzi? Na przykładzie będzie to lepiej widać:</p>
+        <img class="img-responsive" src="img/iframe2.png"/><br />
+        <iframe src="https://mikolajszumigalski.github.io/mainwarsztaty.html" width="600" height="400" name="warsztaty"></iframe> <br />
+        <p>
+        <a href="https://mikolajszumigalski.github.io/zaj1.html" target="warsztaty">Zajęcia 1</a>
+        <a href="https://mikolajszumigalski.github.io/zaj2.html" target="warsztaty">Zajęcia 2</a>
+        <a href="https://mikolajszumigalski.github.io/zaj3.html" target="warsztaty">Zajęcia 3</a>
+        </p>
+        <p>Jak widzimy przy znaczniku <kbd>iframe</kbd> pojawił się nowy atrybut <kbd>name</kbd>. Ma on podobne zadanie do atrybutu id, mianowicie używamy go by wyróżnić go spośród pozostałych znaczników i móc na nim wykonywać różne operacje. Na przykładzie jego cel widać gdy przypatrzymy się już nam znanemu znacznikowi a. Jak wiemy jest to znacznik do linkowania stron. Tym razem jednak posiada on dodatkowy atrybut <kbd>target</kbd>, w którym wybieramy miejsce wyświetlania się naszego linku. W tym wypadku ma to być element o nazwie "warsztaty", którym jest nasz iframe. W ten sposób możemy klikając na odnośniki zmieniać zawartość naszego iframe.</p>
+        <h3>5.1 Znacznik iframe, a Youtube</h3>
+        <p>Wracając do wrzucania filmów na stronę nie sposób nie wspomnieć o najpopularniejszym miejscu w którym możemy znaleźć niezliczoną ilość filmków - czyli o Youtube. Możemy mieć potrzebę wrzucenia jakiegoś filmu właśnie stamtąd i rodzi się pytanie jak to uczynić, skoro znacznik video odnosi się do plików mp3 itd. Jest to naprawdę proste. </p>
+        <img class="img-responsive" src="img/youtube.png"/><br />
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XO7JGfqPB0s" frameborder="0" gesture="media" allowfullscreen></iframe>
+        <p>Pod każdym filmikiem na YT znajdziemy element <b>share</b>, gdy w niego klikniemy wyświetli nam się kilka nowy elementów m. in. element <b>embed</b>. Po kliknięciu na niego wyświetli nam się eleganki iframe z naszym materiałem z YT. Wystarczy go skopiować na stronę i gotowe. Ma on kilka atrybutów które możemy edytować jeśli jest taka potrzeba np. width i height.  </p>
+        
+        <h2>Praca domowa</h2>
+        <p>Proszę o utworzenie katalogu o nazwie PRDOM3, w nim stwórzcie plik o nazwie prdom3.html , w którym musi się znaleźć: <br/>
+            - obraz z atrbutem <b>alt</b> i określoną przez Was wysokością i szerokością <br />
+            - dźwięk w dowolnym formacie z atrybutem <b>controls</b> <br />
+            - klip video o dowolnym formacie z ustaloną wysokością, szerokością i atrybutami <b>autoplay</b> i <b>loop</b> <br />
+        - 6 wybranych symboli specjalnych (można np. w stopce umieścić znaczek &copy; i swoje imie i nazwisko :D ) <br />
+        - iframe z ustalonymi wymiarami (link do dowolnej - niepornograficznej - strony wybranej przez Was ) <br />
+            - drugi iframe z atrybutem <b>name</b> i dodatkowymi elementami <b>a</b>, które zmieniają jego treść (przynajmniej 3 takie elementy a) <br />
+        Oczywiście pliki video czy muzykę też proszę umieścić w tym katalogu i wrzucić to wszystko na Git'a
+         </p>
+        <p>Oprócz tego zaczynamy drugą część naszego projektu, do którego mamy już szablony. Chciałbym aby każdy przygotował 1 plik główny o nazwie index.html, który będzie naszą główną stroną i umieścił na nim treść, obrazki, filmy, dźwięki i inne rzeczy o których się uczyliśmy a uważa, że na jego stronie powinny się znaleźć. Na każdej stronie powinny być elementy <b>a</b> zawarte w elemencie <b>nav</b>, które potraktujemy jako menu. Oczywiście tworzymy do każdego elementu na zakładce osobny plik HTML. Na tą część macie <b>2 tygodnie</b>. Do projektu proszę utworzyć osobny katalog o nazwie "Projekt HTML" i tam umieszczać wszystkie pliki z nim związane. </p>
     </div>
 </body>
 
