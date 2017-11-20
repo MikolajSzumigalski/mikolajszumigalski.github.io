@@ -28,7 +28,7 @@
             Link do pobrania prezentacji z zajęć nr 5: <a href="slajdy/Szumi%20Sealcode%205%20CSS%201.pptx">Prezentacja 5</a>
         </p>
         <h2>Stylowanie strony</h2>
-        <p>Do tej pory dane które umieszczaliśmy na stronie wyświetlały się w dość "surowy sposób". Ok, czasem za pomocą atrybutu mogliśmy np. ustalić grubość obramowania tabeli, jednak z całą pewnością to nie jest szczyt naszych marzeń o porządnym wyglądzie strony. Style na stronie dodajemy za pomocą CSS'a. Tylko czym jest <b>CSS?</b></p>
+        <p>Do tej pory dane, które umieszczaliśmy na stronie wyświetlały się w dość "surowy" sposób. Ok, czasem za pomocą atrybutu mogliśmy np. ustalić grubość obramowania tabeli, jednak z całą pewnością to nie jest szczyt naszych marzeń o porządnym wyglądzie strony. Style na stronie dodajemy za pomocą CSS'a. Tylko czym jest <b>CSS?</b></p>
         <p>Najprościej tłumacząc jest to specjalny język, który służy do nadawania pewnych cech <b>znacznikom HTML</b> np. koloru, grubości, wielkości itd. Sam skrót CSS odczytujemy jako "Kaskadowy Arkusz Stylów"</p>
         <h2>1. Sposoby umieszczania stylów w pliku HTML</h2>
         <p>Zanim odpowiemy sobie na pytanie dlaczego CSS jest nazywany <b>kaskadowym</b> dowiedzmy się w jaki sposób możemy dołączyć style do naszych plików. Prosty przykład - chcemy wyświetlić tekst "Hello Zoltan!" w kolorze zielonym na czarnym tle.</p>
@@ -97,11 +97,11 @@
         <img class="img-responsive" src="img/csscw12.png"/>
         <h3>3.3 Wielkość czcionki</h3>
         <p>Wielkość czcionki możemy ustalić za pomocą własności <kbd>font-size</kbd>, któremu przypisujemy wartości w pikselach</p>
-        <img class="img-responsive" src="img/csscw12.png"/>
+        <img class="img-responsive" src="img/csscw13.png"/>
         <h3>3.4 Wyrównanie tekstu</h3>
         <p>Podobnie jak np. w Wordzie możemy nasz tekst np. wyrównać do lewej strony, do prawej, czy wyśrodkować. Służy do tego właściwość <kbd>text-align</kbd> przyjmujący wartości: <b>left</b>, <b>right</b>, <b>center</b> i <b>justify</b> (ustalenie odlegołości między wyrazami, tak aby każda linia tekstu miała tą samą wartość)</p>
         <h3>3.5 Małe / Wielkie litery</h3>
-        <p>Mając gotowy tekst cały czas możemy modyfikować jego wielkość liter za pomocą samych stylów. Służy do tego własność <kbd>text-transform</kbd> dzięki której możemy: ustawić wszystkie litery na wielkie (wartośc <b>uppercase</b>), zamienić wszystkie na małe (wartość <b>lowercase</b>), zmienić wszystkie pierwsze litery w każdymwyrazie na wielkie (wartość <b>capitalize</b>)</p>
+        <p>Mając gotowy tekst cały czas możemy modyfikować jego wielkość liter za pomocą samych stylów. Służy do tego własność <kbd>text-transform</kbd> dzięki której możemy: ustawić wszystkie litery na wielkie (wartośc <b>uppercase</b>), zamienić wszystkie na małe (wartość <b>lowercase</b>), zmienić wszystkie pierwsze litery w każdym wyrazie na wielkie (wartość <b>capitalize</b>)</p>
         <h3>3.6 Podkreślenia tekstu</h3>
         <p>Poznaliśmy już znacznik <kbd>u</kbd>,który się tym zajmował, ale możemy go zastąpić własnością <kbd>text-decoration</kbd>, która daje nam dodatkowo więcej możliwości. Wartości, które przyjmuje:<br />
             - <b>none</b> - brak podkreślenia (przydatne, gdy chcemy usunąć np. podkreślenie ze znacznika <kbd>a</kbd> !) <br />
@@ -136,7 +136,11 @@
                 <th>pre-line</th><td>Tak</td><td>Nie</td><td>Tak</td>
             </tr>
         </table>  
-           
+        <h3>3.11 Własność overflow</h3>
+        <p>Modyfikując wielkość jakiegoś znacznika może się zdażyć, że wprowadzona zawartość będzie wychodzić poza znacznik. Z tym problemem można sobie poradzić za pomocą właśnie własności overflow. Jeśli chcemy ukryć treść wychodzącą poza znacznik ustalamy wartośc na <b>hidden</b>. W przypadku gdy chcemy, aby wyświetlił się specjalny scroll pozwalający na przewijanie treści znacznika używamy wartości <b>scroll</b> (który domyślnie nam stworzy pasek przewijania, nawet jeśli nie jest konieczny), lub <b>auto</b> (który stworzy pasek przewijania tylko wtedy gdy jest potrzebny) </p>  
+        <h2>Praca domowa</h2>
+        <p>Do pliku z pracą domową z zajęć nr. 3 proszę dodać ostylowanie. Prosiłbym aby skorzystać ze wszystkich 3 sposobów dodawania styli. Dodatkowo prosze zmienić kolor fragmentu tesktu (+ przezroczystość), dodać jednemu ze znaczników (lub całej stronie kolor tła). Prosze zmienić czcionkę, którą wcześniej proszę zaimprostować z Google Fonts. Wykorzystać modyfikacje tekstu o których pisałem w punktach 3.3-3.10, aby opanować możliwości obrabiania tekstu.</p>
+        <p>I proszę pamiętać o 2 fazie projektu na następny tydzień!</p>
     </div>
 </body>
 
