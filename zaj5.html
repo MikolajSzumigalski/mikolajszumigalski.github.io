@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Warsztaty Sealcode</title>
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="Stylesheet" type="text/css" href="css/sealcode.css" />
+</head>
+
+<body>
+    <div class="container">
+       <div id="violetmenu"><img id="logo2" src="img/logo2.png" />
+            <h1>WARSZTATY WEBOWE Mikołaj Szumigalski</h1>
+        </div>
+        <br />
+        <a href="mainwarsztaty.html" type="button" class="btn btn-primary">Powrót</a>
+        <h1>Zajęcia 5</h1>
+        <p>
+            Link do pobrania prezentacji z zajęć nr 5: <a href="slajdy/Szumi%20Sealcode%205%20CSS%201.pptx">Prezentacja 5</a>
+        </p>
+        <h2>Stylowanie strony</h2>
+        <p>Do tej pory dane które umieszczaliśmy na stronie wyświetlały się w dość "surowy sposób". Ok, czasem za pomocą atrybutu mogliśmy np. ustalić grubość obramowania tabeli, jednak z całą pewnością to nie jest szczyt naszych marzeń o porządnym wyglądzie strony. Style na stronie dodajemy za pomocą CSS'a. Tylko czym jest <b>CSS?</b></p>
+        <p>Najprościej tłumacząc jest to specjalny język, który służy do nadawania pewnych cech <b>znacznikom HTML</b> np. koloru, grubości, wielkości itd. Sam skrót CSS odczytujemy jako "Kaskadowy Arkusz Stylów"</p>
+        <h2>1. Sposoby umieszczania stylów w pliku HTML</h2>
+        <p>Zanim odpowiemy sobie na pytanie dlaczego CSS jest nazywany <b>kaskadowym</b> dowiedzmy się w jaki sposób możemy dołączyć style do naszych plików. Prosty przykład - chcemy wyświetlić tekst "Hello Zoltan!" w kolorze zielonym na czarnym tle.</p>
+        <h3>1.1 Dopisywanie atrybutu <b>style</b> do znacznika</h3>
+        <img class="img-responsive" src="img/csscw1.png"/>
+        <p>Nadawanie atrybutów to dla nas żadna nowość. Tym razem nadajemy atrybut o nazwie <kbd>style</kbd>, któremu musimy nadać styl. Każdy z nich składa się z trzech elementów: selektora(wskazuje na element, który chcemy ostylować), nazwy stylu (własności) i wartości. W naszym przykładzie nadajemy kolor tekstu - color, oraz kolor tła (w tym przypadku naszego div'a) - background color. A <b>wartość</b> jest cechą naszej własności czyli kolory - zielony i czarny. Jak widzimy na przykładzie style i ich wartości są odzielone dwukropkiem, a poszczególne własności oddzielamy średnikiem.</p>
+        <h3>1.2 Znacznik <b>style</b> w głowie strony</h3>
+        <img class="img-responsive" src="img/csscw2.png"/> <br />
+        <img width="500" class="img-responsive" src="img/cssstruktura.png"/>
+        <p>Dodawanie do każdego div'a pojedynczego stylu byłoby strasznie uciążliwie przy dużej ich ilości, a kod stałby się nieczytelny. W takiej sytuacji bardzo pomocne może okazać się rozwiązanie ze znacznikiem <kbd>style</kbd>. Na samym początku warto zapamiętać, że ten znacznik umieszczamy w <b>głowie(head)</b> strony, a nie w body. Wewnątrz niego stosujemy następującą regułę: najpierw <b>selektor</b>, a potem wewnątrz nawiasów klamrowych podobnie jak w poprzedniej metodzie - selektor, średnik i wartość. To rozwiązanie sprawia, że mamy wszystkie style w jednym miejscu, co ułatwia pracę gdy chcemy np. zmienić design naszej strony, a nie mamy ochoty przeglądać całego pliku html. A co jeśli nie chcemy stylować wszystkich div'ów tak samo? Tutaj pomogą nam poznane ostatnio atrybuty <kbd>class</kbd> i <kbd>id</kbd>.</p>
+        <img class="img-responsive" src="img/csscw3.png"/>
+        <p>Żeby lepiej zrozumieć idee wykorzystane w przykładzie przypomnijmy sobie różnice między <kbd>class</kbd> i <kbd>id</kbd>. Atrybutu class o konkretnej wartości możemy użyć do kilku obiektów w dokumencie, ale może być tylko jeden atrybut <kbd>id</kbd> o danej wartości (czyli może być kilka obiektów o atrybucie id, ale każdy z nich musi mieć <b>inną wartość</b>). Zauważmy w jaki sposób stylujemy elementy za pomocą class i id. W tym wypadku nie zwracamy uwagi na to czy element jest div'em czy innym znacznikiem - tu ma znaczenie tylko wartość atrybutu class lub id, więc nic nie stoi na przeszkodzie, aby nadać taką samą wartość atrybutu class do elementu div i np. span! Nadając styl atrybutowi class musimy jego nazwę poprzedzić kropką, a w przypadku id - #. </p>
+        <h3>1.3 Style w osobnym pliku .css</h3>
+        <p>Pójdźmy jeszcze dalej - nasza strona internetowa może składać się przecież z więcej niż jednego pliku html. A metody, których używaliśmy do tej pory raczej nam nie pozwolą utworzyć uniwersalnych stylów, które mogłyby wykorzystywać wszystkie (bądź część) pliki html. Właśnie m.in. to powoduje, że możemy skorzystać z trzeciej opcji - oddzielny plik z rozszerzeniem .css. Zaletą takiego rozwiązania jest to, że nie musimy uczyć się nowej struktur pliku, ponieważ wszystko wygląda tak jak w poprzedniej metodzie</p>
+        <a href="stylecw.css"><img width="100" class="img-responsive" src="img/cssicon.png"/></a>
+        stylecw.css
+        <img class="img-responsive" src="img/csscw4.png"/>
+        <p>Na poniższym przykładzie można zobaczyć efekt wykorzystania naszego pliku stylecw.css, oraz w jaki sposób taki plik dołączamy do pliku html. Tym razem wykorzystujemy znacznik <kbd>link</kbd>, który podobnie jak znacznik style umieszczamy w głowie strony. Znacznik ten posiada 2 ważne atrybuty - type, w którym ustalamy <b>typ pliku</b> (znacznik link służy też do linkowania plików innego typu np. pliki javascript), oraz znany nam atrybut href, który zawiera <b>ścieżkę</b> do pliku css. </p>
+        <h3>Kaskadowość</h3>
+        <p>Dlaczego CSS nazywamy kasadowym? Musimy wziąć pod uwagę fakt, że ktoś mógłby chcieć użyć w swojej stronie więcej niż jednej metody dodania stylów np.</p>
+        <img class="img-responsive" src="img/csscw5.png"/>
+        <p>Jak widzimy wyświetliła się metoda pierwsza. I właśnie na ustaleniu tej hierarchii polega kaskadowość. Jak ona wygląda? </p>
+        <ol class="list-group">
+            <li class="list-group-item">5. Domyślny arkusz przeglądarki WWW (niezależny od autora strony)</li>
+            <li class="list-group-item">4. Domyślny arkusz użytkownika przeglądarki (jak wyżej)</li>
+            <li class="list-group-item">3. Zewnętrzne arkusze stylów</li>
+            <li class="list-group-item">2. Definicje stylów w nagłówku dokumentu</li>
+            <li class="list-group-item">1. Definicje stylów w atrybucie style elementu</li>
+        </ol>
+        <p>Czyli pierwszeństwo mają style znajdujące się "bliżej" elementu.</p>
+        <h2>2. Pędzle w dłoń! - kolorujemy stronę </h2>
+        <p>W poprzednich przykładach udało mi się przemycić dwie własności służące do kolorowania naszych elementów - <b>color</b>(do kolorowania tekstu) i <b>background-color</b>(do kolorowania tła). Wartości tych elementów ustaliłem poprzez nadanie im nazw kolorów z j. angielskiego. Jednak to nie jedyna opcja </p>
+        <h3>2.1 Nadanie koloru przez nazwę</h3>
+        <p>Sposób najprostszy, dla osób znających angielski oszczędza czas, jednak bardzo zawęża nam pole do popisu. Choć istnieje 140 nazw kolorów wspieranych przez HTML (możecie je znaleźć <b><a href="https://www.w3schools.com/colors/colors_names.asp">tutaj</a></b>) to jest to tylko kropla w morzu możliwych barw i odcieni.</p>
+        <img class="img-responsive" src="img/csscw6.png"/>
+        <h3>2.2 Nadawanie kolorów przez RGB</h3>
+        <p>RGB co pewnie tajemnicą nie jest to sposób tworzenia kolorów z 3 podtawowowych - czerwonego (<b>R</b>ed), zielonego (<b>G</b>reen) i niebieskiego (<b>B</b>lue). Aby ustawić wartość RGB należy napisać kolor w takim formacie <kbd>rgb(r, g, b)</kbd> gdzie "r,g,b" to wartości kolorów od 0 do 255 gdzie im wyższa wartośc tym większe nasycenie danym kolorem. Wygodną sprawą w takiej sytuacji jest <b><a href="https://www.w3schools.com/colors/colors_rgb.asp"> Kalkulator RGB</a></b> , który pomoże nam w szybki sposób ustalić nasz kolor.  
+        <img class="img-responsive" src="img/csscw7.png"/>
+        </p>
+        <h3>2.3 Nadawanie kolorów poprzez cyfry szesnatkowe</h3>
+        <p>Tutaj mamy schemat następujący <kbd>#rgb</kbd> gdzie r, g, b to cyfry szesnastkowe zapisane przez 2 znaki (16*16 = 256, czyli cały zakres od 0 do 255). Idea taka sama co w poprzednim przykładzie tylko inny sposób. Tutaj również możemy dla ułatwienia korzystać z <a href="https://www.w3schools.com/colors/colors_hexadecimal.asp"><b>kalkulatora</b></a> </p>
+        <img class="img-responsive" src="img/csscw8.png"/>
+        <h3>2.3 Nadawanie kolorów przez HSL</h3>
+        <p>
+            HSL to skrót od: <br />
+            <b>H</b>ue (odcień) - przyjmuje wartości od 0 do 360 (0 to czerwony, 120 to zielony, a 240 to niebieski)<br />
+            <b>S</b>aturation (nasycenie) - przyjmuje wartości procentowe, gdzie 0 to praktycznie kolor szary, a 100 to "pełny" kolor, czyli im mniejsza wartość tym bardziej kolor staje się szary<br />
+            <b>L</b>ightness (tzw. średnie światło białe) też wartości procentowe. Służy do rozjaśniania lub przyciemniania kolorów ( 0 to czarny, 100 to biały)<br />
+        W tym przypadku również możemy skorzystać z <a href="https://www.w3schools.com/colors/colors_hsl.asp"><b>kalkulatora</b></a>   
+        </p>
+        <h3>2.4 Przezroczystość</h3>
+        <p>Kolena ciekawa możliwość, którą możemy zastosować przy metodzie rgb i hsl. Jeśli do rgb, lub hsl dopiszemy literkę <b>a</b> i dodamy czwarty atrybut (przyjmujący wartości od 0 do 1), wtedy możemy ustawić nasz element na przezroczysty (im większa wartość tym większa przezroczystość - ustawienie na 1 sprawi, że element znika) 
+        </p>
+        <img class="img-responsive" src="img/csscw9.png"/>
+        <h2>3. Ten Comic Sans nawet fajny - jak wybrać dobrą czcionkę/font do naszej strony?</h2>
+        <p>Nieraz spotkałem się z kłótniami, kiedy mówić font, a kiedy czcionka - kiedy pogrzebałem w czeluściach internetu okazało się, że obecnie raczej są to być pojęcia zamienne. Jak dzielmy czcionki?</p>
+        <h3>3.1 Czcionki szeryfowe i nieszeryfowe (serif i sans serif)</h3>
+        <p>Na samym początku zaznaczam, że informacje pochodzą z <a href="https://www.whitepress.pl/baza-wiedzy/499/typografia-od-a-do-z-%E2%80%93-czcionki-fonty-i-zasady-ich-stosowania-w-internecie"><b>tej strony</b></a> którą polecam - ja zahaczam tylko o najbardziej moim zdaniem istotne informacje.</p>
+        <p>Szeryfy to elementy ozdobne pisma, kreski stosowane w wielu krojach w celu zwiększenia jego dekoracyjności. Jeśli dany font został zaprojektowany z wykorzystaniem szeryfów, to powinny być one konsekwentnie stosowane w całym zestawie znaków pisarskich danego fontu. Jak można się domyślić czcionki nieszeryfowe takich ozdobnych elementów nie posiadają. W artykule nie jest napisane o trzecim rodzaju czcionek - tzw. <b>Monospace</b>, gdzie każda literka ma taką samą szerokość.</p>
+        <h3>3.2 Ustawianie/dodawanie czcionki na stronę</h3>
+        <p>Choć w internecie można znaleźć całe mnóstwo ładnych czcionek pamiętajmy o tym, aby nie różniły się między sobą, a nawet nejlepiej trzymać się jednej. Czcionki szeryfowe są trudnejsze do czytania, więc jeśli nasza strona posiada dużą ilość tekstu - lepiej z takiej zrezygnować. Font ustalamy w stylach za pomocą właściowści <b>font-family</b></p>
+        <img class="img-responsive" src="img/csscw10.png"/>
+        <p>Dlaczego w przykładzie są podane aż 3 fonty? Nie każda przeglądarka i komputer musi obsługiwać wszystkie czcionki. Tu przydaje się wiedza, jakie czcionki są szeryfowe a jakie nie dzięki czemu zostawiamy sobie furtkę dla starszych przeglądarek. Ciężko powiedzieć czy istnieje jakaś czcionka uniwersalna, ale jeśli użyjemy którejś z tych:  <b>Arial, Tahoma, Verdana</b> to jest duża szansa, że wyświetli się poprawnie.</p>
+        <p>Rozwiązaniem dającym wiele możliwości w zakresie czcionek są <a href="https://fonts.google.com/"><b>Google Fonts</b></a>. Wystarczy wybrać interesującą nam czcionkę a strona sama nam podpowie odpowiedni link do niej, któr umieszczamy w sekcji <b>head</b> strony, a także co umieścić w stylach</p>
+        <img class="img-responsive" src="img/csscw11.png"/> <br />
+        <img class="img-responsive" src="img/csscw12.png"/>
+        <h3>3.3 Wielkość czcionki</h3>
+        <p>Wielkość czcionki możemy ustalić za pomocą własności <kbd>font-size</kbd>, któremu przypisujemy wartości w pikselach</p>
+        <img class="img-responsive" src="img/csscw12.png"/>
+        <h3>3.4 Wyrównanie tekstu</h3>
+        <p>Podobnie jak np. w Wordzie możemy nasz tekst np. wyrównać do lewej strony, do prawej, czy wyśrodkować. Służy do tego właściwość <kbd>text-align</kbd> przyjmujący wartości: <b>left</b>, <b>right</b>, <b>center</b> i <b>justify</b> (ustalenie odlegołości między wyrazami, tak aby każda linia tekstu miała tą samą wartość)</p>
+        <h3>3.5 Małe / Wielkie litery</h3>
+        <p>Mając gotowy tekst cały czas możemy modyfikować jego wielkość liter za pomocą samych stylów. Służy do tego własność <kbd>text-transform</kbd> dzięki której możemy: ustawić wszystkie litery na wielkie (wartośc <b>uppercase</b>), zamienić wszystkie na małe (wartość <b>lowercase</b>), zmienić wszystkie pierwsze litery w każdymwyrazie na wielkie (wartość <b>capitalize</b>)</p>
+        <h3>3.6 Podkreślenia tekstu</h3>
+        <p>Poznaliśmy już znacznik <kbd>u</kbd>,który się tym zajmował, ale możemy go zastąpić własnością <kbd>text-decoration</kbd>, która daje nam dodatkowo więcej możliwości. Wartości, które przyjmuje:<br />
+            - <b>none</b> - brak podkreślenia (przydatne, gdy chcemy usunąć np. podkreślenie ze znacznika <kbd>a</kbd> !) <br />
+            - <b>overline</b> - podkreślenie nad tekstem <br />
+            - <b>underline</b> - podkreślenie pod tekstem <br />
+            - <b>line-through</b> - przekreślenie tekstu <br /> </p>
+        <h3>3.7 Wcięcie tekstu</h3>
+        <p>Tworząc akapity moglibyśmy chcieć, aby każdy z nich zaczynał się wcięciem. Możemy taki efekt uzyskać własnością <kbd>text-indent</kbd>, którego wartości podajemy w pikselach (tak jak np. przy wielkości tesktu) </p> 
+        <h3>3.8 Cień tesktu</h3>
+        <p>Własność <kbd>text-shadow</kbd> , która do tego służy mimo tego, że pozwala na naprawdę ciekawy efekt, raczej nie jest polecana do nadmiernego używania. Niemniej jeśli chcemy wyróżnić jakąś część tekstu warto z czegoś takiego skorzystać.  </p>
+        <h3>3.9 Odległość między literami / wyrazami</h3>
+        <p>Do jej ustalenia używa się własności <kbd>letter-spacing</kbd> jeśli chcemy ustalić odległość między literami i <kbd>word-spacing</kbd> jeśli chcemy ustalić odległośc między wyrazami, które przyjmują wartości w pikselach. Mogą też przyjmować wartości ujemne, które zmniejszą domyślną odległość między wyrazami.</p>
+        <h3>3.10 Białe znaki</h3>
+        <p>Jak już dobrze wiemy używając Entera w naszym pliku html, nie przeniesiemy wyrazu do następnej linii w efekcie finalnym na przeglądarce. Podobnie będzie jeśli użyjemy kilku spacji czy tabulatora. Co ciekawe można to zmienić za pomocą stylów. Wystarczy nam własność <kbd>white-space</kbd>,która przyjmuje wartości: </p>    
+        <table class="table">
+            <tr>
+                <th>Wartość/ cecha</th><th>Enter</th><th>Tab i spacja</th><th>Zawijanie tekstu</th>
+            </tr>
+            <tr>
+                <th>normal</th><td>Nie</td><td>Nie</td><td>Tak</td>
+            </tr>
+            <tr>
+                <th>nowrap</th><td>Nie</td><td>Nie</td><td>Nie</td>
+            </tr>
+            <tr>
+                <th>pre</th><td>Tak</td><td>Tak</td><td>Nie</td>
+            </tr>
+            <tr>
+                <th>pre-wrap</th><td>Tak</td><td>Tak</td><td>Tak</td>
+            </tr>
+            <tr>
+                <th>pre-line</th><td>Tak</td><td>Nie</td><td>Tak</td>
+            </tr>
+        </table>  
+           
+    </div>
+</body>
+
+</html>
