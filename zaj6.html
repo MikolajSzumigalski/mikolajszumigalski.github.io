@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Warsztaty Sealcode</title>
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="Stylesheet" type="text/css" href="css/sealcode.css" />
+</head>
+
+<body>
+    <div class="container">
+       <div id="violetmenu"><img id="logo2" src="img/logo2.png" />
+            <h1>WARSZTATY WEBOWE Mikołaj Szumigalski</h1>
+        </div>
+        <br />
+        <a href="mainwarsztaty.html" type="button" class="btn btn-primary">Powrót</a>
+        <h1>Zajęcia 6</h1>
+        <p>
+            Link do pobrania prezentacji z zajęć nr 6: <a href="slajdy/Szumi%20Sealcode%206%20CSS%202.pptx">Prezentacja 6</a>
+        </p>
+        <h2>Stylowania ciąg dalszy</h2>
+        <p>Na ostatnich zajęciach poznaliśmy sposoby w jaki można dodawać style do naszych plików HTML. Powiedzieliśmy też o kolorach i czcionkach. 
+        </p>
+        <h2>1. Stylowanie obrazów</h2>
+        <p>Oprócz podstawowych atrybutów takich jak <kbd>width</kbd> i <kbd>height</kbd> obrazy można stylować na wiele innych sposobów, które dziś poznamy. Każdy z tytułów jest dodatkowo linkiem do profesjonalnego tutoriala w którym na trochę bardziej iteraktywnych przykładach można zobaczyć to co będziemy na zajęciach przerabiać.</p>
+        <h3><a href="https://www.w3schools.com/cssref/css3_pr_border-radius.asp">1.1 Border-radius</a></h3>
+        <p>Ta własność służy do zaokrąglania narożników. Możemy zaokrąglać za pomocą <b>pikseli</b> ,lub za pomocą wartości <b>procentowych</b>. Dodatkowo ta właściwość może przyjmować kilka argumentów w zależności od tego ile wierzchołków chcemy zaokrąglać:</p>
+              <table class="table">
+              <tr>
+                  <td><kbd>border-radius: wartość1</kbd></td> 
+                  <td>jeśli podamy tylko jedną, wszystkie wierzchołki zaokrąglą się o podaną wartość</td>
+                  </tr>
+                  <tr>
+                      <td><kbd>border-radius: wartość1, wartość2</kbd></td> 
+                      <td>jeśli podamy dwie wartości, ta pierwsza ostyluje wierzchołki: lewy górny i prawy dolny, a ta druga wartość pozostałe dwa </td>
+                  </tr>
+                  <tr>
+                      <td><kbd>border-radius: wartość1, wartośc2, wartość3, wartość 4</kbd></td> 
+                      <td>jeśli podamy 4 wartości, każdy wierzchołek stylujemy osobno w kolejności od lewego górnego zgodnie z ruchem wskazówek zegara</td>
+                  </tr>
+                  </table>
+        <p>Jest też możliwość nadawania oddzielnie każdemu wierzchołkowi zaokrąglenia poprzez własności</p>
+                  <ol class="list-group">
+                      <li>border-top-left-radius:</li>
+                      <li>border-top-right-radius:</li>
+                      <li>border-bottom-right-radius:</li>
+                      <li>border-bottom-left-radius:</li>
+                  </ol>
+       <img class="img-responsive" src="img/css1.png"/>
+       <p>Jak widać na ostatnim przykładzie border-radius daje nam ciekawą funkcję - jeśli nasz obrazek jest kwadratem to nadając mu border radius o wartości przynajmniej połowie długości jego boku (lub procentowo nadamy min. 50%) wtedy obrazek będzie okrągły.</p>
+        <a href="https://www.w3schools.com/cssref/pr_border.asp"><h3>1.2 Obramowanie</h3></a>
+        <p>Możliwości obrmowań jest naprawdę dużo. Zacznijmy od podstawowej własności <kbd>border</kbd>. Przyjmuje ona 3 wartości: grubość (w pikselach), styl i kolor(w wybranej notacji). <a href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_border-style&preval=double">Jakie są style do wyboru?</a>
+        </p>
+        <table class="table">
+            <tr>
+                <th>none</th>
+                <td>brak obramowania</td>
+            </tr>
+            <tr>
+                <th>dotted</th>
+                <td>kropkowane obramowanie</td>
+            </tr>
+            <tr>
+                <th>dashed</th>
+                <td>linia przerywana</td>
+            </tr>
+            <tr>
+                <th>solid</th>
+                <td>jednolity</td>
+            </tr>
+            <tr>
+                <th>double</th>
+                <td>podwójny, pusty w środku</td>
+            </tr> 
+            <tr>
+                <th>groove</th>
+                <td>wyżłobiony</td>
+            </tr> 
+            <tr>
+                <th>ridge</th>
+                <td>wypukły</td>
+            </tr>    
+            <tr>
+                <th>inset</th>
+                <td>wstawka z góry i z lewej</td>
+            </tr>  
+            <tr>
+                <th>outset</th>
+                <td>wstawka z prawej i z dołu</td>
+            </tr>       
+        </table>
+        <img class="img-responsive" src="img/css2.png"/>
+    </div>
+</body>
+
+</html>
