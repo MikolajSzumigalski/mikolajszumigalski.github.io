@@ -32,32 +32,7 @@
         </p>
         <h2>1. Stylowanie obrazów</h2>
         <p>Oprócz podstawowych atrybutów takich jak <kbd>width</kbd> i <kbd>height</kbd> obrazy można stylować na wiele innych sposobów, które dziś poznamy. Każdy z tytułów jest dodatkowo linkiem do profesjonalnego tutoriala w którym na trochę bardziej iteraktywnych przykładach można zobaczyć to co będziemy na zajęciach przerabiać.</p>
-        <h3><a href="https://www.w3schools.com/cssref/css3_pr_border-radius.asp">1.1 Border-radius</a></h3>
-        <p>Ta własność służy do zaokrąglania narożników. Możemy zaokrąglać za pomocą <b>pikseli</b> ,lub za pomocą wartości <b>procentowych</b>. Dodatkowo ta właściwość może przyjmować kilka argumentów w zależności od tego ile wierzchołków chcemy zaokrąglać:</p>
-              <table class="table">
-              <tr>
-                  <td><kbd>border-radius: wartość1</kbd></td> 
-                  <td>jeśli podamy tylko jedną, wszystkie wierzchołki zaokrąglą się o podaną wartość</td>
-                  </tr>
-                  <tr>
-                      <td><kbd>border-radius: wartość1, wartość2</kbd></td> 
-                      <td>jeśli podamy dwie wartości, ta pierwsza ostyluje wierzchołki: lewy górny i prawy dolny, a ta druga wartość pozostałe dwa </td>
-                  </tr>
-                  <tr>
-                      <td><kbd>border-radius: wartość1, wartośc2, wartość3, wartość 4</kbd></td> 
-                      <td>jeśli podamy 4 wartości, każdy wierzchołek stylujemy osobno w kolejności od lewego górnego zgodnie z ruchem wskazówek zegara</td>
-                  </tr>
-                  </table>
-        <p>Jest też możliwość nadawania oddzielnie każdemu wierzchołkowi zaokrąglenia poprzez własności</p>
-                  <ol class="list-group">
-                      <li>border-top-left-radius:</li>
-                      <li>border-top-right-radius:</li>
-                      <li>border-bottom-right-radius:</li>
-                      <li>border-bottom-left-radius:</li>
-                  </ol>
-       <img class="img-responsive" src="img/css1.png"/>
-       <p>Jak widać na ostatnim przykładzie border-radius daje nam ciekawą funkcję - jeśli nasz obrazek jest kwadratem to nadając mu border radius o wartości przynajmniej połowie długości jego boku (lub procentowo nadamy min. 50%) wtedy obrazek będzie okrągły.</p>
-        <a href="https://www.w3schools.com/cssref/pr_border.asp"><h3>1.2 Obramowanie</h3></a>
+        <a href="https://www.w3schools.com/cssref/pr_border.asp"><h3>1.1 Obramowanie</h3></a>
         <p>Możliwości obrmowań jest naprawdę dużo. Zacznijmy od podstawowej własności <kbd>border</kbd>. Przyjmuje ona 3 wartości: grubość (w pikselach), styl i kolor(w wybranej notacji). <a href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_border-style&preval=double">Jakie są style do wyboru?</a>
         </p>
         <table class="table">
@@ -99,6 +74,141 @@
             </tr>       
         </table>
         <img class="img-responsive" src="img/css2.png"/>
+        <p>Oczywiście border to tylko bazowa własność, której mamy też kilka innych wariantów:</p>
+        <table class="table">
+            <tr>
+                <th>Własności + wartości:</th>
+                <th>Do czego służą</th>
+            </tr>
+            <tr>
+                <th>border-color: color</th>
+                <td>color - kolor obramowania (możemy też wybrać fragment obramowania np. border-top-color: aby pokolorować tylko górne obramowanie)</td>
+            </tr>
+            <tr>
+                <th>border-collapse: collapse</th>
+                <td>tabela składa się z obramowania własnego i obramowania komórek. Ta własnośc pozwala nam albo połączyć te brzegi ze sobą ( wartość <b>collapse</b> ), albo odseparować je od siebie ( wartość <b>separate</b>) </td>
+            </tr>
+            <tr>
+                <a href="https://www.w3schools.com/cssref/css3_pr_border-image.asp"><th>border-image: link do obrazka</th></a>
+                <td>możemy ustawić obrazek jako obramowanie, musimy podać między innymi odnośnik do obrazka który wygląda tak <b>url(odnośnik)</b> Jako, że ta własność posiada sporo możliwości i wartości omówię ją na końcu jeśli wystarczy czasu. Można rozkminiać na własną rękę, w razie pytań mogę wyjaśnić indywidualnie</td>
+            </tr>
+        </table>
+        <h3><a href="https://www.w3schools.com/cssref/css3_pr_border-radius.asp">1.2 Border-radius</a></h3>
+        <p>Ta własność służy do zaokrąglania narożników. Możemy zaokrąglać za pomocą <b>pikseli</b> ,lub za pomocą wartości <b>procentowych</b>. Dodatkowo ta właściwość może przyjmować kilka argumentów w zależności od tego ile wierzchołków chcemy zaokrąglać:</p>
+              <table class="table">
+              <tr>
+                  <td><kbd>border-radius: wartość1</kbd></td> 
+                  <td>jeśli podamy tylko jedną, wszystkie wierzchołki zaokrąglą się o podaną wartość</td>
+                  </tr>
+                  <tr>
+                      <td><kbd>border-radius: wartość1, wartość2</kbd></td> 
+                      <td>jeśli podamy dwie wartości, ta pierwsza ostyluje wierzchołki: lewy górny i prawy dolny, a ta druga wartość pozostałe dwa </td>
+                  </tr>
+                  <tr>
+                      <td><kbd>border-radius: wartość1, wartośc2, wartość3, wartość 4</kbd></td> 
+                      <td>jeśli podamy 4 wartości, każdy wierzchołek stylujemy osobno w kolejności od lewego górnego zgodnie z ruchem wskazówek zegara</td>
+                  </tr>
+                  </table>
+        <p>Jest też możliwość nadawania oddzielnie każdemu wierzchołkowi zaokrąglenia poprzez własności</p>
+                  <ol class="list-group">
+                      <li>border-top-left-radius:</li>
+                      <li>border-top-right-radius:</li>
+                      <li>border-bottom-right-radius:</li>
+                      <li>border-bottom-left-radius:</li>
+                  </ol>
+       <img class="img-responsive" src="img/css1.png"/>
+       <p>Jak widać na ostatnim przykładzie border-radius daje nam ciekawą funkcję - jeśli nasz obrazek jest kwadratem to nadając mu border radius o wartości przynajmniej połowie długości jego boku (lub procentowo nadamy min. 50%) wtedy obrazek będzie okrągły.</p>
+        <h3>1.3 Centrowanie obrazka</h3>
+        <p>Żeby wycentrować obrazek nie trzeba używać znacznika <kbd>center</kbd>. Wystarczą do tego 2 własności użyte razem. Pierwsza to <b>margin</b>, która jak łatwo się domyślić służy do określenia marginesu elementu. Wartoś margin ustalamy na <b>auto</b>, wtedy przeglądarka sama nam obliczy odpowiedni margines. Do tego potrzebujemy <b>display</b>, czyli wybieramy sposób wyświetlania się elementu. Za pomocą niego ustalamy czy element wyświetla się <b>liniowo (inline)</b> czy <b>blokowo (block)</b>. Obrazki domyślnie wyświetlają się liniowo, dlatego musimy ustawić display na <b>block</b>. Dlaczego? Element blokowy zawsze będzie wyświetlał się sam w jednej linii, więc jeśli przeglądarka musi sama określić automatycznie jej margines ustawi go jednocześnie z obu stron tak, że będzie on wyśrodkowany. Zasadniczo wystarczy wykuć na pamięć <kbd>margin: auto; display: block</kbd>, ale wolałbym, żebyście zrozumieni, skąd to się bierze, wtedy łatwiej z pamięci to napisać. Warta zapamiętania metoda, ponieważ można ją stosować też do innych elementów. Pamiętajmy jednak, że centrując np. diva, centrujemy tylko sam obiekt. Do wyśrodkowania np. tekstu w divie musimy już użyć własności <b>text-align</b>, którą ustawiamy na <b>center</b></p>
+        <a href="img/css3.png"><img class="img-responsive" src="img/css3.png"/></a>
+        <h3>Cień obrazka</h3>
+        <p>Czasami zwykły border może nam się wydawać mało estetyczny. W takim przypadku możemy użyć cieniowania i własności <b>box shadow</b> Posiada on sporo atrybutów. Cień traktujemy jak duplikację naszego obrazka, tylko zamieniamy treść obrazka na jakiś kolor i modyfikujemy jego wilkością i położeniem do uzyskania pożadanego efektu. Do modyfikowania położenia służą 2 pierwsze wartości. To odległości wierzchołka cienia od wierzchołka obrazka. Trzecia wartość to kolor cienia. Dla zrozumienia przykład.</p>
+        <a href="img/css4.png"><img class="img-responsive" src="img/css4.png"/></a>
+        <p>Ja widzimy mogą być też wartości ujemne. Ale to jeszcze nie jet to co byśmy chcieli. Na razie to wygląda jak przesunięty border. Aby ustawić cień, trzeba dodać kolejną wartość również w pikselach, która oznacza wielkość rozmycia cienia. Umieszczamy ją między kolorem, a współrzędnymi</p>
+        <a href="img/css5.png"><img class="img-responsive" src="img/css5.png"/></a>
+        <p>No i jeszcze wielkość samego cienia. Jest to również wartośc w pikselach, którą dajemy między kolorem, a rozmyciem.</p>
+        <a href="img/css6.png"><img class="img-responsive" src="img/css6.png"/></a>
+        <p>Posumowując: schemat nadawana cienia wygląda tak: <kbd>box-shadow: x, y, rozmycie, wielkośc kolor</kbd> gdzie x, y to współrzędne cienia względem obrazka oczywiście.</p>
+        <h3>1.4 Przezroczystość obrazka</h3>
+        <p>Ostatno mówiliśmy o przezroczystości kolorów, teraz powiemy sobie o przezroczystości obrazka, które wygląda bardzo podobnie. Wystarczy dodać właściwość <b>opacity</b>, która przyjmuje wartości liczbowe od 0 do 1. Im mniejsza wartość tym większa przezroczystość</p>
+        <a href="img/css7.png"><img class="img-responsive" src="img/css7.png"/></a>
+        <h3>1.5 Filtry</h3>
+        <p>Co ciekawe nie potrzebujesz do nich Instagrama, możesz to zrobić w css'ie. Służy do tego własność <b>filter</b> Zdaję sobię sprawę, że to może powinno być w formie ciekawostki, ale myślę, że warto chociaż wiedzieć, że tak można. Poniżej tabelka z filtrami css'a + przykłady użycia</p>
+        <table class="table">
+            <tr>
+                <th>Filtr (podajemy jako wartość własności filter)</th>
+                <th>Co robi i jakie wartości przyjmuje</th> 
+            </tr>
+            <tr>
+                <th>blur(wartość-px)</th>
+                <td>Rozmycie obrazka, im większa wartość w px, tym większe rozmycie</td>
+            </tr>
+            <tr>
+                <th>brightness(wartość-%)</th>
+                <td>Jasność, przyjmuje wartość w procentach. Powyżej 100% mamy rozjaśnienie, ponieżej 100% przyciemnienie</td>
+            </tr>
+            <tr>
+                <th>contrast(wartość-%)</th>
+                <td>Kontrast kolorów, analogiczne wartości procentowe jak w poprzenim przykładzie</td>
+            </tr>
+            <tr>
+                <th>grayscale(wartość-%)</th>
+                <td>nadawanie szarości, wartość w procentach, max 100% (czarno biały obraz) </td>
+            </tr>
+            <tr>
+                <th>hue-rotate(wartość-deg)</th>
+                <td>rotacja odcieniami, wyrażona w stopniach(jednostka <b>deg</b>)</td>
+            </tr>
+            <tr>
+                <th>invert(wartość-%)</th>
+                <td>odwracanie kolorów, wartości w procentach. Max 100% (kolory całkowicie odwrotne)</td>
+            </tr>
+            <tr>
+                <th>saturate(wartość-liczba)</th>
+                <td>saturacja(nasycenie), nie jestem grafikiem i nie chcę się wgłębiać w ten temat za mocno, chętnych odsyłam <a href="https://pl.wikipedia.org/wiki/Saturacja_(teoria_koloru)">tutaj</a>. Jest ona związana m.in. z wartościami RGB </td>
+            </tr>
+            <tr>
+                <th>sepia(wartość-%)</th>
+                <td>nie będę tłumaczył dokładnie czym jest sepia, głównie chodzi o "brązowienie" obrazka (pozwala np. nadać efekt wyglądu jak w starych zdjęciach). Tu wartości od 0% do 100% (same odcienie brązu)</td>
+            </tr>
+        </table>
+        <p>Oczywiście efekty można łączyć (możliwe, że nie wszystkie, ale warto próbować dla osiągnięcia ciekawszych efektów)</p>
+        <a href="img/css8.png"><img class="img-responsive" src="img/css8.png"/></a>
+        <p>Poniżej rysunek pomocniczy do <b>hue-rotate</b></p>
+         <a href="https://www.quackit.com/pix/stock/color_wheel_hsl.png"><img style="width: 200px;"class="img-responsive" src="https://www.quackit.com/pix/stock/color_wheel_hsl.png"/></a>
+        <h2>2. Ustawianie tła</h2>
+        <p>Ustawialiśmy już kolor tła, ale dużo więcej możliwości daje ustawianie tła np. z obrazka. Opcji takiego ustawiania jest więcej niż na pierwszy rzut oka może się wydawać</p>
+        <h3>2.1 Background-color: color</h3>
+        <p>Wiem, że mówiłem już o tej własności, ale chcciałem o niej przypomnieć, ponieważ może zdarzyć się sytuacja, że nasz brazek nie wypełnia całej przestrzeni i wtedy aby uniknąć białego tła warto ustawić kolor alternatywny</p>
+        <h3>2.2 Background-image: url()</h3>
+        <p>Tutaj ustawiamy sobie nasz obrazek jako tło.</p>
+        <a href="img/css9.png"><img class="img-responsive" src="img/css9.png"/></a>
+        <h3>2.3 Background-repeat: repeat</h3>
+        <p>Jak widzimy, obraz nie zmieścił się do div'a więc został zduplikowany po prawej stronie. Możemy oczywiście ustalić, że nasz obraz wyświetla się tylko raz, a gdy się nie zmieści niech użyje koloru, który ustawiliśmy jako <b>background-color</b>. Wystarczy użyć własności <b>background-repeat</b>, która przyjmuje wartości: repeat(czyli obrazek się powtarza), <b>repeat-x</b>(obrazek się powtarza, ale tylko gdy obrazek jest za krótki na szerokość), <b>repeat-y</b>(obrazek się powtarza, ale tylko gdy obrazek jest za krótki na wysokość), <b>no-repeat</b>(obrazek się nie powtarza).</p>
+        <a href="img/css10.png"><img class="img-responsive" src="img/css10.png"/></a>
+        <h3>2.3 Background-position</h3>
+        <p>Ta własność posiada różne sposoby na jej ustalenie. Możemy użyć schematu <b>poziom pion</b>, gdzie poziom to jedno ze słów: <b>left, right, center</b> , a pion: <b>top, bottom, center</b>. Jeśli wpiszemy tylko jedno słowo, drugie z automatu ustawi się jako center</p>
+        <a href="img/css11.png"><img class="img-responsive" src="img/css11.png"/></a>
+        <p>Można też użyć schematu liczbowego <b>x, y</b>, gdzie x, y to współrzędne w pixelach lewego górnego wierzchołka</p>
+        <a href="img/css12.png"><img class="img-responsive" src="img/css12.png"/></a>
+        <h3>2.4 Background-attachment</h3>
+        <p>Często nie wiemy jak długa będzie nasza strona i pojawia się problem, że przy jej przewijaniu w dół skończy się obrazek. Domyślnie obrazek przewija się razem z tekstem, ale jest opcja, aby nasz obrazek wyświetlałsię statycznie i nie przewijał się razem z innymi elementami. Służy do tego własność <b>background-attachment</b>, której domyślną wartością jest <b>scroll</b>, czyli obrazek przewijany razem z tekstem. Aby uzyskać efekt statyczności należy wartość ustawić na <b>fixed</b></p>
+        <a href="backgroundattachment.html"><b><p>Przykład tutaj</p></b></a>
+        <h3>2.5 Background: linear-gradient(kierunek, kolor1, kolor2,..., kolorx)</h3>
+        <p>Linear gradient to bardzo ciekawy sposób wypełnienia kolorem tła. Jest to efekt płynnego przejścia między dwoma kolorami. Pierwsza, najbardziej skomplikowana wartośc to <b>kierunek</b>. Musimy powiedzieć w którym kierunku kolor się zmienia np. <b>to bottom</b>(z góry na dół), to top right(z lewego dolnego do prawego górnego narożnika). Standardowo każdy z kolorów zajmuję tę samą część, ale jeśli obok kolorów podamy wartości procentowe wtedy możemy tym sterować sami</p>
+        <h3>Połączene gradientu z obrazkiem</h3>
+        <p>To już trochę hardkor, ale efekty tego są naprawdę ciekawe. Tam gdzie mamy własność <b>background-image</b> z naszym odnośnikiem dodajemy dodatkowo nasz gradient. To jednak nie wystarczy, ponieważ musimy jeszcze użyć dodatkowej własności <b>background-blend-mode:</b> która będzie naszym łącznikiem (dosł. "mieszaczem") między tymi warstwami. Nie będę wypisywał wszystkich wartości, moża je znaleźć <a href="https://www.w3schools.com/cssref/pr_background-blend-mode.asp"><b>tutaj</b></a>, po prostu pokażę kilka efektów </p>
+        <a href="img/css13.png"><img class="img-responsive" src="img/css13.png"/></a>
+        <h3>3.2 Stylowanie tabeli</h3>
+        <p>
+            Nauczyliśmy się już stylować tabele za pomocą atrybutów, czas na style! Uznałem, że zrobię do tego oddzielną tabelkę. Ogromną większość tych styli już poznaliśmy, ale chciałem zebrać do kupy te, które warto kojarzyć właśnie z tabelami.
+        </p>
+        <h3><a href="stylowanieTabeli.html">Kliknij, aby obejrzeć tabelę stylowania tabel</a></h3>
+        <h3>Ćwiczenie: spróbuj odtworzyć podane poniżej tabele</h3>
+        <div class="row">
+            <div class="col-sm-6"><img class="img-responsive" src="img/tableexp1.png" /></div>
+            <div class="col-sm-6"><img class="img-responsive" src="img/tableexp2.png" /></div>
+        </div>
     </div>
 </body>
 
