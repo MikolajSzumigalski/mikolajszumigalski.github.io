@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Canvas Szumi</title>
+	<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+        <canvas id="diagonal" style="border: 1px solid black;" height="200px" width="200px"></canvas>
+        <canvas id="trails" style="border: 1px solid black;" height="200px" width="200px"></canvas>
+	</div>
+    <script>
+        function drawDiagonal(){
+            //Pobranie canvas i jego kontekstu
+            var canvas = document.getElementById('diagonal');
+            var context = canvas.getContext('2d');
+            
+            //Stworzenie ścieżki o koordynatach bezwzględnych
+            context.beginPath();
+            context.moveTo(70, 140);
+            context.lineTo(140, 70);
+            
+            //Wstawienie linii do canvas
+            context.stroke();
+        }
+        window.addEventListener("load", drawDiagonal, true);
+        
+        function createCanopyPath(context) {
+            //Rysowanie kształtu sosny
+            context.beginPath();
+            
+            context.moveTo(-25, 50);
+            context.lineTo(-10, 80);
+            context.lineTo(-20, -80);
+            context.lineTo(-5, -110);
+            context.lineTo(-15, -110);
+            
+            //górna część drzewa
+            context.lineTo(0, -140);
+            context.lineTo(15, -110);
+            context.lineTo(5, -110);
+            context.lineTo(20, -80);
+            context.lineTo(10, -80);
+            context.lineTo(25, -50);
+            
+            //Zamknięcie ścieżki
+            context.closePath();
+        }
+        
+        function drawTrails(){
+            var canvas = document.getElementById('trails');
+            var context = canvas.getContext('2d');
+            
+            context.save();
+            context.translate(130, 220);
+            //Grubość linii
+            context.lineWidth = 4;
+            //Zaokrąglenie rogów
+            context.lineJoin = 'round';
+            //kolor
+            context.strokeStyle = 'blue';
+            context.fillStyle = 'green';
+            context.fill();
+            //Stworzenie ścieżki dla nowego kształtu
+            createCanopyPath(context);
+            
+            //Obramowanie ścieżki
+            context.stroke();
+            context.restore();
+        }
+        window.addEventListener("load", drawTrails, true);
+    </script>
+</body>
+
+</html>
