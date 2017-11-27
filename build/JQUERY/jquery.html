@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Warsztaty Sealcode</title>
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="Stylesheet" type="text/css" href="css/sealcode.css" />
+</head>
+<style>
+    .btn {
+        background-color: blue;
+        color: white;
+        border-radius: 2px;
+    }
+
+    div.borders {
+        border: 5px solid darkviolet;
+        border-radius: 5px;
+    }
+    img{
+        position: absolute;
+    }
+    #cigar{
+      top: 450px;
+      left: 190px;
+    }
+    #glass{
+      top: 315px;
+      left: 130px;
+    transform: rotate(12deg); 
+    }
+    
+    #hat{
+        top: -20px;
+        left: 30px;
+    }
+    #thug{
+        top: 800px;
+    }
+    #relative{
+        position: relative;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="borders">
+            <p id="tekst0">„Masz lat blisko 40, wyglądasz na blisko 30, wyobrażasz sobie, że masz nieco ponad 20, a postępujesz, jakbyś miał niecałe 10.”<br /> — Dijkstra do Jaskra</p>
+            <button id="fadetoggle" class="btn">Blaknij/Odlbalknij XD</button>
+        </div>
+        <div class="borders">
+            <p id="tekst1">Julian Alfred Pankratz wicehrabia de Lettenhove, znany jako Jaskier – poeta, trubadur, bard oraz najbliższy przyjaciel wiedźmina Geralta. Jaskier jest synem hrabiny de Lettenhove, ma kuzyna Ferranta de Lettenhove (bratanek ojca Jaskra). W czasie głównej akcji sagi ma niespełna czterdzieści lat. Urodzony w 1229 roku.</p>
+            <button id="guzik1" class="btn">Ukryj</button> <button id="guzik2" class="btn">Pokaż</button> <button id="guzik3" class="btn">Pokaż/Ukryj</button>
+        </div>
+        <div class="borders">
+        <p id="tekst3">Grywał między innymi na dworach królów Niedamira, Vizimira i Venzlava, jest przyjacielem króla Ethaina z Cidaris (władca bardzo ceni sobie jego ballady).</p>
+            <button id="slide" class="btn">Szurnij</button>
+        </div>
+        <p>Studiował przez cztery lata truwerstwo i poezję w Akademii Oxenfurckiej (podczas studiów zdobył opinię lenia, hulaki i idioty), a następnie został tam wykładowcą (gdy ukończył egzaminy z wynikiem celującym) i uczył studentów przez rok, po czym wyruszył w świat.</p>
+
+        <p>W dalszym ciągu jednak zdarza mu się przyjeżdżać do Oxenfurtu i dawać gościnne wykłady. W ciągu kilku lat zdobył sławę, która obiegła cały świat i zyskał opinie jednego z lepszych minstreli w krajach północnych, a dwiema z najbardziej znanych z jego ballad są Ballada o Lwiątku z Cintry oraz Próżne zabiegi. Inną opinię, na jaką sobie zapracował, to opinia największego kobieciarza na świecie, a jego urokom uległa nawet Anna Henrietta - władczyni Toussaint. W trakcie podróży z Geraltem, Jaskier zaczął pisać memuary pt. Pół wieku poezji (początkowo nazwa brzmiała Pięćdziesiąt lat poezji). </p>
+        <button id="fdp" class="btn">Król jest tylko jeden!!!</button>
+        <div id="relative">
+            <img id="szumi" src="szumi.jpg" width="500">
+            <img id="cigar" src="Thug-Life-Cigarette-Smoke-PNG.png" width="100">
+            <img id="glass" src="Thug-Life-Glasses-PNG.png" width="300">
+            <img id="hat" src="Thug-Life-Hat-PNG.png" width="370">
+            <img id="thug" src="Thug-Life.png" width="370">
+        </div>
+         <audio><source src="fdp.ogg" type="audio/ogg"></audio> 
+    </div>
+    <script src="jquery.js"></script>
+</body>
+
+</html>
