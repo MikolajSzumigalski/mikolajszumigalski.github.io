@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Warsztaty Sealcode</title>
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="Stylesheet" type="text/css" href="css/sealcode.css" />
+    <style>
+        
+        h4{
+            font-size: 160%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+       <div id="violetmenu"><img id="logo2" src="img/logo2.png" />
+            <h1>WARSZTATY WEBOWE Mikołaj Szumigalski</h1>
+        </div>
+        <br />
+        <a href="mainwarsztaty.html" type="button" class="btn btn-primary">Powrót</a>
+        <h1>Zajęcia 7</h1>
+        <p>
+            Link do pobrania prezentacji z zajęć nr 7: <a href="slajdy/Szumi%20Sealcode%207%20Selektory%20CSS.pptx">Prezentacja 7</a>
+        </p>
+        <h2>Selektory CSS</h2>
+        <p>Na pierwszych zajęciach z CSS'a dowiedzieliśmy się już czym są <b>selektory</b> jednak poznaliśmy tylko kilka ich możliwości. Wiemy, że selektorem może być nazwa znacznika, elentualnie atrybut <b>class</b> i <b>id</b>. Jednak selektorów jest więcej i mają wiele ciekawych możliwości.</p>
+        <h2>1. Selektory elementów</h2>
+        <p>Należą do nich oczywiście selektory znaczników czyli p, a h1 itd. Warto też wspomnieć o selektorze *{}, który jest <b>selektorem uniwersalnym</b>. Style w takim selektorze będą wyświetlane we wszystkich elementach strony.</p>
+        <a href="img/select1.png"><img class="img-responsive" src="img/select1.png"/></a>
+        <p>Poniżej mamy ciekawy przykład ostylowania takich elementów jak <b>body</b> czy nawet <b>html</b></p>
+        <a href="img/select2.png"><img class="img-responsive" src="img/select2.png"/></a>
+        <p>Zauważmy jak małą częśc naszego dokumentu tak naprawdę stanowi body! Zasięg tego elementu kończy się tam gdzie kończą się pozostałe elementy. Dużo większy zasięg ma znacznik <b>html</b>, który choć obramował tylko treść to jednak kolor tła jest ustawiony na całej witrynie. Jeśli usuniemy stylowanie znacznika html co strona nie pokryje się kolorem body, tylko kolorem selektora <b>*</b></p>
+        <h3>1.1 Dziedziczenie elementów</h3>
+        <p>Ufam, że większość z Was miała już dziedziczenie np. klas na przedmiotach informatycznych. Dla przypomnienia jednak dziedziczenie polega na tym, że elementy, które znajdują się wewnątrz innego elementu przyjmują automatycznie jego cechy. To niezwykle istotne podczas ich stylowania. Załóżmy, że mamy div'a a wewnątrz niego inne elementy, którym chcemy nadać style</p>
+        <h4>1.1.1 Potomkowie</h4>
+        <a href="img/select3.png"><img class="img-responsive" src="img/select3.png"/></a>
+        <p>Jeśli przy selektorze dopiszemy nazwę innego to wszyscy <b>potomkowie</b> tego elementu odziedziczą te cechy. Zarówno dzieci, wnuki, prawnuki... </p>
+        <h4>1.1.2 Dzieci</h4>
+        <a href="img/select4.png"><img class="img-responsive" src="img/select4.png"/></a>
+        <p>Przykład niemal identyczny jednak zamiast <kbd>div span</kbd> przy stylach mamy zapis <kbd>div > span</kbd> co oznacza, że styl zostanie przypisany jedynie <b>dzieciom</b> elementu div. To ważne aby rozumieć różnicę między <b>dzieckiem</b> elementu, a jego <b>potomkiem</b></p>
+        <h4>1.1.3 Bracia</h4>
+        <a href="img/select5.png"><img class="img-responsive" src="img/select5.png"/></a>
+        <p>Jeżeli między dwoma selektorami postawimy znak + to będzie oznaczało, że style otrzymuje "ten drugi", czyli po prawej brat.</p>
+        <a href="img/select6.png"><img class="img-responsive" src="img/select6.png"/></a>
+        <p>Bardziej "roszczeniowym" sposobem jest zamiania znaku <b>+</b> na <b>~</b>. Oznacza to, że nie tylko brat po prawej będzie ostylowany, a <b>wszyscy</b> bracia po prawej otrzymają styl (nawet jeśli rozdziela je inny element!)</p>
+        <h2>2. Selektory atrybutów </h2>
+        <p>Powiem uczciwie, że to rozwiązanie może być mało intuicyjne i rzadko stosowane na początku niemniej warto wiedzieć, że tak można. Do tej pory stosowaliśmy selektory dla dwóch atrybutów - <b>id</b> i <b>class</b>. Można to zrobić także dla innych stosując notacje z poniższej tabelki:</p>
+        <table class="table">
+            <tr>
+            <th>Selektor</th>
+            <th>Opis</th>
+            <th>Przykład użycia</th>
+            </tr>
+            <tr>
+                <td>Z[atr]</td>
+                <td>Ostylowanie dla znaczników <b>Z</b> z atrybutem <b>atr</b></td>
+                <td><a href="img/select7.png">link do przykładu</a></td>
+            </tr>
+            <tr>
+                <td>Z[atr="w"]</td>
+                <td>Ostylowanie dla znaczników <b>Z</b> z atrybutem <b>atr</b>, którego wartość wynosi dokładnie <b>w</b> </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Z[atr~="w"]</td>
+                <td>Ostylowanie dla znaczników <b>Z</b> z atrybutem <b>atr</b>, którego jedna z wartości wynosi dokładnie <b>w</b></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Z[atr|="w1"]</td>
+                <td>Ostylowanie dla znaczników <b>Z</b> z atrybutem <b>atr</b>, wartości rozpoczynają się od <b>w</b></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Z[atr^="w"]</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Z[atr$="w"]</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Z[atr*="w"]</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
