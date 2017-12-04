@@ -79,25 +79,159 @@
             </tr>
             <tr>
                 <td>Z[atr|="w1"]</td>
-                <td>Ostylowanie dla znaczników <b>Z</b> z atrybutem <b>atr</b>, wartości rozpoczynają się od <b>w</b></td>
+                <td>Ostylowanie dla znaczników <b>Z</b> z atrybutem <b>atr</b>, wartości rozpoczynają się od <b>w1</b></td>
                 <td></td>
             </tr>
             <tr>
                 <td>Z[atr^="w"]</td>
-                <td></td>
+                <td>Ostylowanie dla znaczników <b>Z</b> z atrybutem <b>atr</b> dla których wartośc zaczyna się od <b>w</b></td>
                 <td></td>
             </tr>
             <tr>
                 <td>Z[atr$="w"]</td>
-                <td></td>
+                <td>Ostylowanie dla znaczników <b>Z</b> z atrybutem <b>atr</b> dla których wartość kończy się na <b>w</b></td>
                 <td></td>
             </tr>
             <tr>
                 <td>Z[atr*="w"]</td>
-                <td></td>
+                <td>Ostylowanie dla znaczników <b>Z</b> z atrybutem <b>atr</b> dla których wartość zawiera <b>w</b></td>
                 <td></td>
             </tr>
         </table>
+        <h2>3. Selektory specjalne</h2>
+        <p>Małe przypomnienie o selektorach <b>id</b> i <b>class</b>. Ostatnio kożystaliśmy w nich w taki sposób, że jeśli jakiś element miał id, lubklasę to nie miało znaczenia czy był divem czy nie. Jednak jeśli przed <b>.</b> w przypadku klas i przy <b>#</b> w przypadku id wstawimy nazwę znacznika, to ograniczymy ilość elementów, które te selektory obejmują do konkretnych znaczników</p>
+        <a href="img/select8.png"><img class="img-responsive" src="img/select8.png"/></a>
+        <h2>4. Selektory pseudoelementów</h2>
+        <p>Pod tą dziwnie brzmiącą nazwą możemy odkryć ciekawy sposób na dodanie własności, treści przed i po naszym elemencie. Pseudoelement w teoretycznie nie należy do zasięgu elementu, a jest jedynie takim doczepionym dodatkiem. Selektory pseudoklas zapisujemy po podwójnym dwukropku i wyróżniamy następujące: </p>
+        <table class="table">
+            <tr>
+                <td>znacznik::<b>first-line</b></td>
+                <td>pierwsza linia treści znacznika "znacznik"</td>
+            </tr>
+            <tr>
+                <td>znacznik::<b>first-letter</b></td>
+                <td>pierwsza litera treści znacznika "znacznik"</td>
+            </tr>
+            <tr>
+                <td>znacznik::<b>before</b></td>
+                <td>pseudoelement wstawiany przed wartością znacznika "znacznik"</td>
+            </tr>
+            <tr>
+                <td>znacznik::<b>after</b></td>
+                <td>pseudoelement wstawiany po wartości znacznika "znacznik"</td>
+            </tr>
+        </table>
+        <a href="img/select9.png"><img class="img-responsive" src="img/select9.png"/></a>
+        <p>Omówmy sobie przykład - myślę, że działanie <b>first-line</b> i <b>first-letter</b> jest dość oczywiste. Wydaje mi się, że ta druga własność może być bardziej przydatna w wypadku gdy chcemy zrobić w naszym akapicie <b>inicjał</b> czyli ozdobną pierwszą literę (stosowaną m.in. już w średniowieczu). Pseudoelementy mają dużo różnych zastosowań. Np. możemy dodać do znacznika <b>blockquote</b> cudzysłów. którego domyślnie nie ma, a dodatkowo możmy mu zmienić kolor czy dowolnie inaczej przekształcać. Oprócz tego możemy ładnie ostylować np. nagłówek dodając mu poziome linie z góry i z dołu. Sam pseudoelement ::before możemy np ustawić jako ozdobnik do znacznika li aby na własny sposób udekorować elementy listy. Jeśli chodzi o <b>symbole specjalne</b> do CSS'a to nie są one takie same jak w HTML'u. Można je znaleźć <a href="https://www.w3schools.com/cssref/css_entities.asp"><b>TUTAJ</b></a>. Dodatkowo elementy ::before i ::after posiadają swój własny selektor <b>content</b> dzięki któremu możemy przypisać mu jakąś wartość (słowa, symbole itd.).</p>
+        <h2>5.Selektory pseudoklas</h2>
+        <p>Z reguły odnosiliśmy się do elementu za pomocą jego <b>klasy</b> bądź <b>id</b>. Jednak powedzieliśmy już przy dziedziczeniu o hierarchii elementów, czyli niektóre elementy mają swoich synów, braci i rodziców. Może się zdarzyć, że chcialibyśmy ostylować zawsze dziesiąty element danej listy. Moglibyśmy się odnieść do jego id ale co jeśli dopiszemy coś do listy, a dalej chcemy aby to dziesiąty element był ostylowany? Co jeśli chcemy ostylować co drugi element? Tu przychodzą z pomocą właśnie pseudoklasy</p>
+        <h3>5.1 Korzeń (root)</h3>
+        <p>Spróbujmy sobie wyobrazić nasz dokument jako drzewo (rozumiane jako struktura danych). Każdy element ma swojego rodzica oprócz jednego - którego nazywamy <b>korzeniem</b>. Co jest korzeniem dokumentu html? Właśnie znacznik <b>html</b>. Więc zapis <kbd>div:root{style}</kbd> jest równoznaczny z <kbd>html{style}</kbd>. Po co jest ten korzeń? CSS jest również wykorzystywany do plików <b>XML</b>, których korzeń może być inny. Warto pamiętać jednak czym korzeń jest dla lepszego zrozumienia budowy naszego pliku html.</p>
+        <h3>5.2 Pseudoklasy cykliczne</h3>
+        <p>Tu właśnie mówimy o przypadkach kiedy chcemy ostylować np. co drugi, co trzeci element listy.</p>
+        <table class="table">
+            <tr>
+                <th>E:nth-child(n)</th>
+                <td>Załóżmy, że element E jest dzieckiem jakiegoś elementu X. Chcemy ostylować dzieci elementu X. Jeśli wpiszemy za <b>n</b> wartość <b>4n</b> wtedy co czwarty element będący dzieckiem X będzie ostylowany. A co jeśli chcielibyśmy stylować co piąty element rozpoczynając od 6stego? Wystarczy zapis <b>5n+6</b> </td>
+            </tr>
+            <tr>
+               <th>E:nth-last-child(n)</th>
+                <td>Schemat praktycznie taki sam jak poprzednio ale tym razem rozpoczynamy od ostatniego elementu </td>
+            </tr>
+            <tr>
+                <th>E:nth-of-type(n)</th>
+                <td>Załóżmy, że nie chcemy stylować dzieci, a np. chcemy ostylować np. co drugi element div, albo co drugi element jakiejść klasy. Wtedy korzystamy właśnie z tej metody.</td>
+            </tr>
+            <tr>
+                <th>E:nth-last-of-type(n)</th>
+                <td>Tak samo jak w przypadku nth-last-child. Zaczynamy po prostu od ostatniego elementu</td>
+            </tr>
+            
+        </table>
+        <a href="img/select10.png"><img class="img-responsive" src="img/select10.png"/></a>
+        <a href="img/select11.png"><img class="img-responsive" src="img/select11.png"/></a>
+        <h3>5.3 Dzieci</h3>
+        <p>Selektory dotyczące konkretnych nie cyklicznych dzieci</p>
+        <table class="table">
+            <tr>
+                <th>E:first-child</th>
+                <td>Element E jest pierwszym dzieckiem swojego rodzica </td>
+            </tr>
+             <tr>
+                <th>E:last-child</th>
+                <td>Element E jest ostatnim dzieckiem swojego rodzica</td>
+            </tr>
+             <tr>
+                <th>E:only-child</th>
+                <td>Element E jest jedynym dzieckiem swojego rodzica</td>
+            </tr>
+        </table>
+        <a href="img/select12.png"><img class="img-responsive" src="img/select12.png"/></a>
+        <h3>5.4 Bracia</h3>
+        <p>Podobnie jest w przypadku typu, ale tutaj mamy do czynienia z braćmi</p>
+        <table class="table">
+            <tr>
+                <th>E:first-of-type</th>
+                <td>Element E jest pierwszym bratem typu E </td>
+            </tr>
+             <tr>
+                <th>E:last-of-type</th>
+                <td>Element E jest ostatnim bratem typu E</td>
+            </tr>
+             <tr>
+                <th>E:only-of-type</th>
+                <td>Element E jest jedynym elementem typu E</td>
+            </tr>
+        </table>
+        <h3>5.5 Element pusty</h3>
+        <div>W przypadku elementu pustego wykorzystujemy selektor <kbd>:empty</kbd>. Element pusty to taki, który nie posiada dzieci, ani nie zawiera tekstu</div>
+        <h3>5.6 Odsyłacze</h3>
+        <p>Strona html rozpoznaje czy użtkownik wszedł w jakiś link czy nie. Na pewno kojarzymy sytuację gdy kiedyś linki na wielu stronach były niebieskie a po odwiedzeniu stawały się fioletowe i wiedzieliśmy, że na tej stronie już byliśmy</p>
+        <table class="table">
+            <tr>
+                <th>E:link</th>
+                <td>w przypadku nieodwiedzonego linku</td>
+            </tr>
+            <tr>
+                <th>E:visited</th>
+                <td>w przypadku odwiedzonego linku</td>
+            </tr>
+        </table>
+        <h3>5.7 Elementy które zmieniają się gdy aktywujemy je myszką</h3>
+        <p>Zdarza się że po najechaniu na przycisk ten zmienia nagle kolor, albo się powiększa. Takie cuda można uzyskać za pomocą selektorów takich jak: </p>
+        <table class="table">
+            <tr>
+                <th>E:active</th>
+                <td>Jeśli element ma jakąś cechę (np. odsyłanie) to wtedy nasz styl zadziała w momencie aktywacji tej cechy </td>
+            </tr>
+            <tr>
+                <th>E:hover</th>
+                <td>Style pojawią się gdy najedziemy na element myszką</td>
+            </tr>
+            <tr>
+                <th>E:focus</th>
+                <td>Wykorzystywane w np. polach tekstowych. Jeśli na taki pole klikniemy to wtedy wykonają się nasze style</td>
+            </tr>
+        </table>
+        <h3>5.8 Negacja</h3>
+        <p>Negacja jest w logice szeroko wykorzystywana. HTML tej cudownej właściwości nam nie poskąpił i możemy za pomocą <kbd>:not(selektor)</kbd> odwrócić nasze selektory. Więc jeśli weźmiemy <b>nth-child(3n)</b> to ostylowane zostaną wszystkie elementy z wyjątkiem co trzeciego.</p>
+        <a href="img/select13.png"><img class="img-responsive" src="img/select13.png"/></a>
+        <h2>Trochę praktyki</h2>
+        <p>Proszę o modyfikację <a href="tabelacw.txt"><b>TEJ TABELI</b></a> w której:<br />
+            - co drugi <b>rząd</b> będzie miał jasnoniebieskie tło, a pierwszy niebieskie<br />
+            - jeden z elementów <b>td</b> będzie zawierał link, który kiedy jest nieodwiedzony jest zielony, a gdy jest odwiedzony staje się fioletowy<br />
+            - dwa z elementów <b>td</b> będą posiadały atrybut title i bedą miały podkreślenie nad tekstem<br />
+            Proszę też dokleić pod tabelą wybrany tekst i dodać mu <b>wcięcie</b> oraz ustawić <b>inicjał</b> (ozdabiamy wg własnej fantazji liczę na Waszą kreatywność - warto skorzystać z cieni i ogólnie materiałów z poprzednich zajęć)
+        </p>
+        <h2>Praca domowa</h2>
+        <p>Proszę utworzyć w repozytorium katalog o nazwie "PRDOM5", a w nim plik html, w którym należy: <br />
+            - użyć selektora uniwersalnego (może nadawać kolor tekstu na czerwony)<br />
+            - umieścić listę (3 elementy) numerowaną, a w niej listę (3 elementy) nienumerowaną, a w tej drugiej wykorzystując dziedziczenie nadać obramowanie elementom <b>li</b> zielone obramowanie <br />
+            - dodać akapit tekstu, którego pierwsza linia będzie miała inną czcionkę (może być użyta z Google Font) niż pozostały tekst, a pierwsza literka będzie inicjałem (podobnie jak w ćwiczeniu styl możecie wybrać sami)
+            - umieścić nagłówek nad tym akapitem i prosze mu nadać pseudoklasy <b>before</b> i <b>after</b>. Można ich użyć podobnie jak w przykładzie na zajęciach, lub ostylować wg włąsnego pomysłu tak, aby nagłówek wyglądał ciekawie <br />
+            - umieścić tabelę w której co trzeci wiersz będzie miał pomarańczowe tło, a elementy td będą odnośnikami, o różnych kolorach w przypadku odwiedzonych i nieodwiedzonych
+        
+        </p>
     </div>
 </body>
 
