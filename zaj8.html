@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Warsztaty Sealcode</title>
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="Stylesheet" type="text/css" href="css/sealcode.css" />
+    <style>
+        
+        h4{
+            font-size: 160%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+       <div id="violetmenu"><img id="logo2" src="img/logo2.png" />
+            <h1>WARSZTATY WEBOWE Mikołaj Szumigalski</h1>
+        </div>
+        <br />
+        <a href="mainwarsztaty.html" type="button" class="btn btn-primary">Powrót</a>
+        <h1>Zajęcia 8</h1>
+        <p>
+            Link do pobrania prezentacji z zajęć nr 8: <a href="slajdy/Szumi%20Sealcode%208%20Model%20Pudelkowy.pptx">Prezentacja 8</a>
+        </p>
+        <h2>Obszar jaki zajmuje element</h2>
+        <p>Ustalamy sobie, że nasz <b>div</b> ma wymiary <kbd>width: 200px</kbd> i <kbd>height: 300px</kbd>. Ale oprócz tego ustawiamy mu <kbd>border: 2px</kbd> i może jeszcze <kbd>padding: 5px</kbd>. Jakie wymiary ma teraz div?</p>
+        <h2>1. Model pudełkowy</h2>
+        <p>Aby lepiej zrozumieć samą ideę <b>modelu pudełkowego </b>(ang. box model) spróbujmy potraktować nasz potencjalny element(div, span, p czy jakikolwiek inny) jako prostokąt(pudełko) o konkretnych wymiarach. Teraz po kolei będziemy nadawać naszemu elementowi różne właściwości, które omówimy</p>
+        <a href="img/box1.png"><img class="img-responsive" src="img/box1.png"/></a>
+        <h3>1.1 Warstwa treści</h3>
+        <p>Wielkość tej warstwie nadają właściwości <kbd>width</kbd> i <kbd>height</kbd>, a w przypadku gdy ich nie ustalamy wielkości te są nadawane automatycznie, bądź dopasowane są do treści tekstu znajdującego się wewnątrz znacznika</p>
+        <a href="img/box2.png"><img class="img-responsive" src="img/box2.png"/></a>
+        <p>Jak widzimy w przypadku nieustalonych wielkości elementy takie jak <b>span</b> czy <b>a</b> dopasowują się do wielkości treści. W przypadku znacznika <b>p</b> jest tak tylko w przypadku wysokości, a długość automatycznie jest maksymalna. Wynika to z tego, że pierwsz dwa elementy są <b>liniowe</b> a element p jest <b>blokowym</b> (o elementach blokowych i liniowych mówiliśmy na zajęciach numer 4).</p>
+        <h3>1.2 Warstwa między treścią, a brzegiem elementu, czyli padding</h3>
+        <p>O właściwości padding mówiliśmy przy tabelach. Tam pojawiła się właściwość <b>cellpadding</b>, która ustalała nam odległości między wartością komórki, a brzegiem. Pamiętajmy, że ustawiając <kbd>padding: 10px</kbd> zarówno szerokość naszego elementu wzrośnie o 20px, jak i jego wysokość</p>
+        <a href="img/box3.png"><img class="img-responsive" src="img/box3.png"/></a>
+        <p>Jak widzimy drugi element jest zdecydowanie wyższy i szerszy</p>
+        <h3>1.3 Obramowanie (border)</h3>
+        <p>O obramowaniu mówiliśmy już sporo. Tutaj niespodzinki też ne będzie. Element, który otrzyma <kbd>border: 15px</kbd> będzie szerszy o 30px, oraz wyższy o tą samą wartość.</p>
+        <a href="img/box4.png"><img class="img-responsive" src="img/box4.png"/></a>
+        <p>Oczywiście nie ma najmnijeszych przeciwwskazań, aby używać na tym samym obiekcie zarówno <b>padding</b> jak i <b>border</b>.
+        </p>
+        <h3>1.4 Margin(es)</h3>
+        <p>Ostatnią wartością, która "powiększa" nasz element to margines. Jest to odstęp między naszym elementem a innym elementem. W przypadku tabel uzyskiwaliśmy to za pomocą <b>cellspacing</b>. Margines nie jest widoczny, traktujemy go jako przerwę, jednak pamiętajmy, że tak naprawdę jest nierozerwalnie związany z nszym elementem i musimy pamiętać o tym w momencie gdy planujemy ustalić wymiary naszej strony. </p>
+        <a href="img/box5.png"><img class="img-responsive" src="img/box5.png"/></a>
+        <p>Jak widzimy element numer 2 jest "odsunięty" zarówno od div'a u góry, jak i od lewej ściany dokumentu.</p>
+        <h2>2. Liczenie całkowitej szerokości i wysokości elementu</h2>
+        <a href="img/box5.png"><img class="img-responsive" src="img/BOXMODEL.png"/></a>
+        <p>Jak widać nie jest to specjalnie skomlikowane, jednak trzeba pamiętać, że każda w włściwości dodaje trochę pikseli zarówno z góry, z dułu z lewej i z prawej.</p>
+        
+    </div>
+</body>
+
+</html>
