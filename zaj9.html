@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Warsztaty Sealcode</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="Stylesheet" type="text/css" href="css/sealcode.css" />
+    <style>
+        h4 {
+            font-size: 160%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="violetmenu"><img id="logo2" src="img/logo2.png" />
+            <h1>WARSZTATY WEBOWE Mikołaj Szumigalski</h1>
+        </div>
+        <br />
+        <a href="mainwarsztaty.html" type="button" class="btn btn-primary">Powrót</a>
+        <h1>Zajęcia 9</h1>
+        <h1>Bootstrap 3</h1>
+        <h2>1. Czym jest Bootstrap</h2>
+        <p>
+            Poznaliśmy już CSS, który służy nam do stylowania naszych stron internetowych. Jak się przekonaliśy do potrafi być żmudna i czasochłonna sprawa, pozycjonowanie elementów, responsywność... Nie da się ukryć, że muszą być narzędzia, które ułatwiają prace nad stylami. Jednym z takich narzędzi jest właśnie <b>Bootstrap</b>. Został on stworzony przez programistów Twittera i bardzo przydaje się jeśli chcemy mieć responsywną i dość elegancką stronę, z dużo mniejszym nakładem czasowym. Bootstrap to tak naprawdę zestaw <b>klas</b>, które są już zaimplementowane, a my tylko je dodajemy do projektu.
+        </p>
+        <h2>2. Skąd pobrać Bootstrap'a</h2>
+        <p>Bootstrap jest w sumie takim arkuszem stylów, więc link do niego umieszczamy własnie tam. Możemy go pobrać <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/"><b>stąd</b></a>. Możemy go również pobrać ze strony głównej </p>
+        <h2>2. Tworzymy stronkę z Bootsrap'em 3</h2>
+        <p>Poniżej znajdziecie link do prostej stronki, bez żadnych stylów. Zobaczymy jak szybko, praktycznie bez dodawania własnch stylów, jedynie dopisując gotowe klasy stworzyć dość schludną i responsywną stronkę. Uwaga, ze strony głównej, można obecnie pobrać już najnowszą wesję Bootstrapa 4. Nie wszystkie elementy z dzisiejszej lekcji mogą działać poprawnie, więc proszę o dodanie nagłówka o którym wspominam w następnym akapicie</p>
+        <a href="boostraplesson.zip"><img src="img/downloadimage.ico" width="50"></a>
+        <h2>3. Dodajemy nagłówki bootstrapa</h2>
+        <p>Pobierzmy i dodajmy do sekcji <kbd>head</kbd> następujące nagłówki <a href="boostraplesson/headers.txt"><b>link do nich tu</b></a>. Pierwszy z nich dopasowuje nam stronę do urządzenia, a drugi importuje style, klasy które nam będą potrzebne. Ostatnie 2 imortują funkcje, które przydadzą się nam do animacji.</p>
+        <h2>4. Kontener</h2>
+        <p>Zacznijmy od wyglądu strony. Klasa <kbd>container</kbd>dodaje do naszej strony marginesy, które sprawiają, że stonę czyta się wygodniej na szerokich urządzeniach. Zauważmy, że p ozwęzeniu ekranu marginesy się zminiejszają.</p>
+        <h2>5. 12stkowy podział strony</h2>
+        <p>Do pełnego zrozumienia jak to działa zachęcam do lektury <a href="https://www.w3schools.com/bootstrap/bootstrap_grid_basic.asp"><b>tego artykułu</b></a>. Bootstrap pozwala nam wygodnie podzielić nam artykuł na kolumny, które dostosowują swoją wielkość do ekranu komputera. Służą do tego klasy <kbd>col</kbd>. Jeśli chcemy aby kolumny przechodziły do następnej linii gdy ekran będzie mniejszy dopisujemy do klasy <kbd>-sm</kbd>, a na końcu liczbę z przedziału od 1 do 12. Zobaczmy przykład:</p>
+        <a href="img/bootstrapcol.png"><img class="img-responsive" src="img/bootstrapcol.png"/></a>
+        <h2>6. Jumbotron</h2>
+        <p>Prosta klasa <kbd>jumbotron</kbd>, która tworzy nam szare tło z marginesami. Przydatne na początku stronki.</p>
+        <h2>7. Small</h2>
+        <p>Klasa <kbd>small</kbd> służy do zmniejszenia fragmentu nagłówka. Zmienia też kolor tego fragmentu, przydatne w rozbudowanych nagłówkach</p>
+        <h2>8. Obrazki</h2>
+        <p>Do obrazków również można dodać klasy, np klasa <kbd>img-rounded</kbd> zaokrągli rogi obrazka, a klasa <kbd>img-circle</kbd> sprawi, że obrazki będą okręgami. Oczywiście można te efekty osiągnąć łatwo sami, ale taki rozwiąznie jest dużo szybsze i łatwiejsze do zapamiętania.</p>
+        <h2>9. Listy</h2>
+        <p>Bootstrap oferuje nam zupełnie inny wygląd list do tych do których przywykliśmy. Bardziej przypomina tabelkę, ale wygląda całkiem dobrze. Do elementu <b>ol/ul</b> (wyświetlają się tak samo) dodajemy klasę <kbd>list-group</kbd>, a do elementów <b>li</b> dodajemy klasę <kbd>list-group-item</kbd></p>
+        <h2>10. Tabele</h2>
+        <p>Klasa do stylowania tabeli jest bardzo intuicyjna i nazywa się <kbd>table</kbd>. Tabele nie posiadają wsyzstkich obramowń, jednak wyglądają dzięki temu dość powiedziałbym "nowowcześnie". <a href="https://www.w3schools.com/bootstrap/bootstrap_tables.asp"><b>Tutaj</b></a> można zobaczyć jak jeszcze można modyfikować tabele, kolory itp.</p>
+        <h2>11. Animowane ukrywanie/ odkrywanie</h2>
+        <p>Bardzo przydatna rzecz, szczególnie, że normalnie taki efekt jest dosyć długi do napisania (CSS możliwia towrzenie animacji). Potrzebujemy najpierw elementu, który będzie nam "uruchamiał" animację. Nadajemy mu 2 atrybuty: <kbd>data-toggle="collapse" data-target="#demo"</kbd> przy czym <kbd>demo</kbd> to <b>id</b> elementu który chcemy odkryć. Elementowi, który chcemy odkryć nadajemy oczywiście jakieś <b>id</b> oraz klasę <kbd>class="collapse"</kbd></p>
+        <h2>12. Responsywne menu główne</h2>
+        <p>Tutaj będzie zdecydowanie najwięcej zabawy. Poraz kolejny odsyłam do lektury tego artykułu, ponieważ jest to bardziej skomplikowane od poprzednich rzeczy. Na początku naszej klasie <kbd>nav</kbd> nadajemy klasy <kbd>navbar navbar-inverse</kbd>. Pierwsza jest do tworzenia menu, druga, odwraca kolory tła i czcionki. Następnie wewnątrz dodajemy klasę <kbd>container-fluid</kbd>, ponieważ chcemy, aby menu było na całej szerokości strony, a nie z marginesami jak reszta. Potem tworzymy tzw. nagłowek menu. Będzie odpowiadał za przycisk odsyłający do strony głównej i tworzenia tzw. ikonki hamburger, która rozwija listę menu gdy ekran jest zbyt mały na pomieszczenie elementów menu. Wygląda to tak:
+            <a href="img/bootstrapnav1.png"><img class="img-responsive" src="img/bootstrapnav1.png"/></a> Pamiętajmy o klasie <kbd>navbar-brand</kbd> dla głownego odsyłacza. <br>
+            Pozostałe elementy strony "opakujemy" div'em, który będzie posiadał klasy <kbd>collapse navbar-collapse</kbd>, które będą odpowiadać za "schowanie się" elementów gdy ekran będzie niewielkich rozmiarów. Oprócz tego liście zawierającej pozostałe elementy nadajemy klasy <kbd>nav navbar-nav</kbd>, aby wyświetlały się odpowiednio poziomo itp. Pozostało nam ukryć elementy menu które są roziwjane do podelementów. Do tego musimy  najpierw nadać elementowi <b>li</b> klasę <kbd>dropdown</kbd>. Potem elementowi <b>a</b> nadajemy klasę <kbd>dropdown-toggle</kbd>, oraz atrybut <kbd>data-toggle="dropdown"</kbd>. Następnie dodajemy do elementu <kbd>ul</kbd> klasę <kbd>dropdown-menu</kbd>. Żeby użytkownik wiedział, że element menu jest rozwijany można też dodać element <b>span</b> z klasą <kbd>caret</kbd>, który stworzy nam charakterystyczny trójkąt
+        </p>
+        <h2>13. Ostatnie poprawki</h2>
+        <p>Bardzo Was zachęcam do zabawy z efektem końcowym. Można np. ostylować stopkę, zmienić czcionkę ewentuanie zajrzeć na <a href="https://www.w3schools.com/bootstrap/default.asp">stronę z tutorialem</a> i spróbować dodać do tej strony inne elementy, które nie były omawiane. W razie problemów slużę pomocą. Można też spróbować stworzyć od nowa własną stronkę w zależności czy starczy czasu. </p>
+        <h2>Praca domowa</h2>
+        <p>Absolutnie nie wymagam korzystania z Bootstrapa w projekcie (ale jeśli ktoś chce to oczywiście może)! Jako pracę domową proszę stworzyć katalog o nazwie "BOOTSTRAP", a w nim stronkę o nazwie index.html, która będzie wykorzystywać przynajmniej 10 różnych klas jakie oferuje nam Bootstrap (mogą być jakieś nieomawiane)</p>
+    </div>
+</body>
+
+</html>

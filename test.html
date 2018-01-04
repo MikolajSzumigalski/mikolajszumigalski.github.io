@@ -2,25 +2,59 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <style>
-        #container{
-            display: flex;
-            justify-content: center;
+        .red{
+            background-color: red;
+            height: 50px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
         }
-        .item{
-            width: 100px;
-            height: 100px;
-            order: -1;
+        .blue{
+            background-color: blue;
+            height: 50px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
         }
-    </style>
+        .green{
+            background-color: green;
+            height: 50px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+        }
+    </style>   
+    
 </head>
 
 <body>
-    <div id="container">
-        <div class="item" style="background-color:blue"></div>
-        <div class="item" style="background-color:yellow"></div>
-        <div class="item" style="background-color:green"></div>
-        <div class="item" style="background-color:black"></div>
-    </div> 
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 red">col-sm-8</div>
+            <div class="col-sm-4 blue">col-sm-4</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 red">col-sm-3</div>
+            <div class="col-sm-3 blue">col-sm-3</div>
+            <div class="col-sm-3 red">col-sm-3</div>
+            <div class="col-sm-3 blue">col-sm-3</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 red">col-sm-3</div>
+            <div class="col-sm-3 blue">col-sm-3</div>
+            <div class="col-sm-5 red">col-sm-3</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 red">col-sm-3</div>
+            <div class="col-sm-3 blue">col-sm-3</div>
+            <div class="col-sm-5 red">col-sm-3</div>
+            <div class="col-sm-2 green">col-sm-1</div>
+        </div>
+    </div>
 </body>
 </html>
