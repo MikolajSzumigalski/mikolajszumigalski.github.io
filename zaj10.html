@@ -10,6 +10,7 @@
         a {
             text-decoration: none;
         }
+
     </style>
 </head>
 
@@ -39,25 +40,211 @@
             <h3>Przerzucamy się na konsolę NODE.js</h3>
             <p class="w3-container">Na razie odcinamy się od HTML'a i będziemy nasze pliki .js odpalać za pomocą konsoli <b>NODE.js</b>. Na komputerach wydziałowych powinn być zainstalowane, można też je zainstalować u siebie, pobierająć go <a href="https://nodejs.org/en/" class="w3-card-4"><b>stąd</b></a></p>.
             <p class="w3-container">Po zainstalowaniu z domyślnymi ustawieniami odpalamy <b>Node.js command prompt</b>. Jeżeli będziemy chcieli uruchomić skrypt języka JavaScript, wydajemy polecenie <b>node nazwaSkryptu.js</b> i wciskamy ENTER.</p>
+            <p class="w3-container">Spróbujmy jeszcze raz odpalić nasz przykład. Plik możemy nazwać helloworld.js i uruchomić za pomocą NODE.js</p>
             <div class="w3-panel w3-card w3-light-grey">
                 <h3>HelloWorld!</h3>
                 <div class="w3-code jsHigh notranslate">
                     console.log("Hello World!");
                 </div>
             </div>
-            <p>Spróbujmy jeszcze raz odpalić nasz przykład. Plik możemy nazwać helloworld.js i uruchomić za pomocą NODE.js</p>
             <div class="w3-panel w3-card w3-light-grey">
-                <h3>HelloWorld!</h3>
+                <h3>Przykład 2</h3>
                 <div class="w3-code jsHigh notranslate">
                     var name = 'Adam';<br>var surname = "Kowalski";<br>/* wielowierszowy<br>komentarz */<br>console.log("Witaj, " + name + " " + surname);
                 </div>
             </div>
-            
+            <p>Jak widzimy możemy tworzyć własne zmienne, podobnie jak w innych językach. Tutaj jednak się nie rozdrabniamy na int, double... tu jest po prostu <b>var</b> bez względu na to czy jest liczbą, czy tekstem. Zmienne tekstowe umieszczamy za to w nawiasach (obojętnie jakich). Komentarze dodajemy podobnie jak np. w języku <b>C++</b>. Dodatkowo poznaliśmy kolejny sopsób jak wyświetlać tekst razem ze zmiennymi za pomocą <code class="w3-codespan htmlHigh">console.log</code></p>
+            <h3>Pętla "for"</h3>
+            <div class="w3-panel w3-card w3-light-grey">
+                <h4>Przykład 3.1</h4>
+                <div class="w3-code jsHigh notranslate">
+                    var x = 1; <br> var y = 2; <br> var z = '3'; <br> console.log(x == 1); <br> console.log(x != y); <br> console.log(x > y); <br> console.log(y
+                    <=z ) <br>
+                        console.log(z == 3); <br> console.log(z === 3); <br> console.log(y !== '2'); <br> y = y.toString(); <br> console.log(y !== '2');
+
+                </div>
+            </div>
+            <p>Operator === jest operatorem identycznościowym, tzn. porównuje nie tylko wartości, ale także typy danych. Podobnie jest z operatorem !==.</p>
+            <div class="w3-panel w3-card w3-light-grey">
+                <h4>Przykład 3.2</h4>
+                <div class="w3-code jsHigh notranslate">
+                    var x = -5; <br> x++; // inkrementacja o 1 <br> x = x + 3; <br> x--; // dekrementacja o 1 <br> <br> if (x == -2) { <br> console.log("true"); <br> } else { <br> console.log("false"); <br> } <br>
+                    <br> x++; <br> var y = 0; <br>
+                    <br> if ((x >= -2) && (y
+                    <=0 )) { // koniunkcja (and) <br>
+                        console.log("true"); <br> } <br>
+                        <br> if ((x > -3) || (y > 0)) { // alternatywa (or)<br> console.log("true");
+                        <br> }
+                        <br>
+                        <br> if (!(x
+                        < -5)) { // negacja (not) <br>
+                            console.log("true"); <br> }
+
+                </div>
+            </div>
+            <h3>Tablice</h3>
+            <div class="w3-panel w3-card w3-light-grey">
+                <h4>Przykład 4.1</h4>
+                <div class="w3-code jsHigh notranslate">
+                    var colors = []; <br> colors = ['white', 'red', 'blue', 'other']; // wypełnienie tablicy danymi <br>
+                    <br> var el = colors[0]; // odniesienie do pierwszego elementu tablicy <br>
+                    <br> console.log(el); <br>
+                    <br> colors[1] = 'green'; <br>
+                    <br> console.log(colors);
+                    <br>
+
+
+                </div>
+            </div>
+            <p>Więcej informacji o tablicach można znaleźć <a href="http://kursjs.pl/kurs/super-podstawy/tablice.php"><b>TUTAJ</b></a></p>
+            <h3>Pętla for</h3>
+            <div class="w3-panel w3-card w3-light-grey">
+                <h4>Przykład 5.1</h4>
+                <div class="w3-code jsHigh notranslate">
+                    for (var i = 0; i
+                    < 5; i++) { <br>
+                        console.log(i); <br> } <br>
+                        <br> var iterators = [1, 2, 3, 4, 5]; <br> for (i in iterators) { <br> console.log(i); <br> } <br>
+                        <br>
+
+
+                </div>
+            </div>
+            <div class="w3-panel w3-card w3-light-grey">
+                <h4>Przykład 5.2</h4>
+                <div class="w3-code jsHigh notranslate">
+                    var tab = [1, 2, 3, 4, 5]; <br> for (var i = 0; i
+                    < tab.length; i++) { <br>
+                        console.log(tab[i]); <br> } <br>
+                        <br>
+
+
+                </div>
+            </div>
+            <div class="w3-panel w3-card w3-light-grey">
+                <h4>Przykład 5.3</h4>
+                <div class="w3-code jsHigh notranslate">
+                    var n = 5; // deklaracja rozmiaru tablicy tab <br>
+var tab = []; // stworzenie jednowymiarowej tablicy <br>
+<br>
+for (var i = 0; i < n; i++) { <br>
+	tab[i] = []; // każdy element tablicy jednowymiarowej staje się nową tablicą, dzięki czemu mamy tablicę dwuwymiarową <br>
+} <br>
+<br>
+
+
+                </div>
+            </div>
+            <div class="w3-panel w3-card w3-light-grey">
+                <h4>Przykład 5.4</h4>
+                <div class="w3-code jsHigh notranslate">
+                    var n = 5; // deklaracja rozmiaru tablicy tab <br>
+var tab = []; // stworzenie jednowymiarowej tablicy <br>
+<br>
+for (var i = 0; i < n; i++) { <br>
+	tab[i] = []; // każdy element tablicy jednowymiarowej staje się nową tablicą, dzięki czemu mamy tablicę dwuwymiarową <br>
+} <br>
+<br>
+
+
+                </div>
+            </div>
+            <p>W pętlach działają słowa kluczowe break i continue (tak jak np. w C++).</p>
+            <h3>Pętla "while"</h3>
+            <div class="w3-panel w3-card w3-light-grey">
+                <h4>Przykład 6.1</h4>
+                <div class="w3-code jsHigh notranslate">
+                var i = 0; <br>
+while (i < 5) { <br>
+	console.log(i); <br>
+	i++; <br>
+} <br>
+
+                </div>
+            </div>
+            <h3>Pętla "do-while"</h3>
+            <div class="w3-panel w3-card w3-light-grey">
+                <h4>Przykład 7.1</h4>
+                <div class="w3-code jsHigh notranslate">
+                var i = 0;<br>
+<br>
+do {<br>
+	console.log(i);<br>
+	i++;<br>
+} while (i < 5);<br>
+<br>
+               
+                </div>
+            </div>
+            <h3>Funkcje</h3>
+            <div class="w3-panel w3-card w3-light-grey">
+                <h4>Przykład 8.1</h4>
+                <div class="w3-code jsHigh notranslate">
+                function hello() { <br>
+	console.log('Hello world!'); <br>
+} <br>
+ <br>
+hello();<br>
+
+                </div>
+            </div>
+            <div class="w3-panel w3-card w3-light-grey">
+                <h4>Przykład 8.2</h4>
+                <div class="w3-code jsHigh notranslate">
+                function getArea(width, height) { <br>
+	return (width * height); <br>
+} <br>
+ <br>
+var wallWidth = 3; <br>
+var wallHeight = 5; <br>
+var area = getArea(wallWidth, wallHeight); <br>
+<br>
+console.log(area);<br>
+
+                </div>
+            </div>
+            <div class="w3-panel w3-card w3-light-grey">
+                <h4>Przykład 8.3</h4>
+                <div class="w3-code jsHigh notranslate">
+                function getSize(width, height, depth) { <br>
+	var area = width * height; <br>
+	var volume = area * depth; <br>
+	var sizes = [area, volume] <br>
+	return sizes; // funkcja zwraca tablicę elementów <br>
+} <br>
+ <br>
+var area = getSize(3, 2, 3)[0]; <br>
+var volume = getSize(3, 2, 3)[1]; <br>
+<br>
+console.log(area, volume);<br>
+<br>
+// lub:<br>
+<br>
+var areaVolume = getSize(3, 2, 3); // tablica o dwóch elementach<br>
+<br>
+console.log(areaVolume);<br>
+
+                </div>
+            </div>
+            <p>Znając już funkcje w języku JavaScript, możemy przedstawić jeszcze jeden sposób wykonywania pętli. Obrazuje to poniższy przykład.</p>
+            <div class="w3-panel w3-card w3-light-grey">
+                <h4>Przykład 8.4</h4>
+                <div class="w3-code jsHigh notranslate">
+                var numbers = [11, 6, 12, 1, 3, 14, 10, 0, 13, 4, 15, 5, 9, 17, 7, 16, 2, 8]; <br>
+var chars = ['O', 'H', 'W', 'N', 'I', ' ', 'E', 'B', 'E', 'W', 'L', 'T', 'C', 'G', 'O', 'E', 'O', 'E']; <br>
+<br>
+numbers.forEach(function(element) {<br>
+	console.log(chars[element]);<br>
+});<br>
+
+                </div>
+            </div>
         </div>
     </div>
     <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
     <script>
         w3CodeColor();
+
     </script>
 </body>
 
