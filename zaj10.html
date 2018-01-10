@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Warsztaty Sealcode</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-deep-purple.css">
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w3-container">
+        <h1 class="w3-center w3-theme-d3"><img src="img/logo2.png" width="200px"><br>Warsztaty Webowe<br>Mikołaj Szumigalski</h1>
+        <div class="w3-container">
+            <a href="mainwarsztaty.html" type="button" class="w3-button w3-theme-d3">Powrót</a>
+            <h2 class="w3-center"><b>Zajęcia 10 <br>JavaScript</b></h2>
+            <h3>Czym jest JavaScript?</h3>
+            <p class="w3-container">Ktoś kto nigdy nie programował może po poznaniu HTML'a i CSS'a pomyśleć - "ŁAŁ! Jestem programistą(tką)". Hmm... no nie do końca. O ile HTML i CSS nie możemy nazwać językami programowania, to JavaScript już tak - to skryptowy język programowania. Proszę nie mylić też JavaScriptu z Javą, oprócz nazwy nic ich nie łączy.</p>
+            <h3>Do czego służy JavaScript?</h3>
+            <p class="w3-container">Ma dużo zastosowań, my skupimy się dziś na tym dotyczącym wsparcia naszych stron internetowych. JS (będę pisał czasem tym skrótem) pomaga nam w tworzeniu bardziej skomplikowanych animacji, pozwala na większą interakcję użytkownika ze stroną, wsparcie dla pobierania, wysyłania danych, kontrola bierząca nad elementami na stronie i wiele innych</p>
+            <h3>Hello World!</h3>
+            <p class="w3-container">Każdy szanujący się programista uczący się nowego języka powinien zacząć właśnie od tego. Zanim jednak wyświetlimy napis dowiedzmy się jak dodać skrypt w JS na naszą stronę. Będzie nam potrzebny znacznik <code class="w3-codespan htmlHigh">&lt;script&gt;</code> ,który umieścimy na samym końcu sekcji <b>body</b>. Dlaczego tam? Kod JS w niektórych przypadkach będzie bardziej użyteczny gdy strona już się załaduje, więc bezpieczniej umieszczać go tam. Można go też dać np. do sekcji head, ale to może spowodować problemy w niektórych sytuacjach. Przykład:</p>
+            <div class="w3-panel w3-card w3-light-grey">
+                <div class="w3-code htmlHigh notranslate">
+                    &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br> &lt;title&gt;Wyświetlamy HelloWorld!&lt;/title&gt;<br> &lt;body&gt;
+                    <br><br> &lt;script&gt; console.log("Hello World!"); &lt;/script&gt;
+                    <br>&lt;/body&gt;
+                    <br> &lt;/html&gt;
+                </div>
+            </div>
+            <p>No dobrze, tylko gdzie ten napis się wyświetli? Wystarczy wcisnąć klawisz <b>F12</b> (na Firefox i Chrome na pewno, na innych przeglądarkach nie dam głowy) i wtedy naszym oczom ukaże się konsola a tam napis "Hello World!"</p>
+            <h3>Trzymanie kodu w osobnym pliku</h3>
+            <p class="w3-container">Tu podobnie jak w przypadku CSS możemy umieścić kod w osobnym pliku, tym razem z rozszerzeniem <b>.js</b> , a potem zaimportować go do pliku HTML. Robi się to w bardzo łatwy sposób, ponieważ do nowo poznanego znacznika <code class="w3-codespan htmlHigh">&lt;script&gt;</code> dodajemy znany atrybut <code class="w3-codespan htmlHigh">src</code> i link do pliku z kodem JS</p>
+            <h3>Przerzucamy się na konsolę NODE.js</h3>
+            <p class="w3-container">Na razie odcinamy się od HTML'a i będziemy nasze pliki .js odpalać za pomocą konsoli <b>NODE.js</b>. Na komputerach wydziałowych powinn być zainstalowane, można też je zainstalować u siebie, pobierająć go <a href="https://nodejs.org/en/" class="w3-card-4"><b>stąd</b></a></p>.
+            <p class="w3-container">Po zainstalowaniu z domyślnymi ustawieniami odpalamy <b>Node.js command prompt</b>. Jeżeli będziemy chcieli uruchomić skrypt języka JavaScript, wydajemy polecenie <b>node nazwaSkryptu.js</b> i wciskamy ENTER.</p>
+            <div class="w3-panel w3-card w3-light-grey">
+                <h3>HelloWorld!</h3>
+                <div class="w3-code jsHigh notranslate">
+                    console.log("Hello World!");
+                </div>
+            </div>
+            <p>Spróbujmy jeszcze raz odpalić nasz przykład. Plik możemy nazwać helloworld.js i uruchomić za pomocą NODE.js</p>
+            <div class="w3-panel w3-card w3-light-grey">
+                <h3>HelloWorld!</h3>
+                <div class="w3-code jsHigh notranslate">
+                    var name = 'Adam';<br>var surname = "Kowalski";<br>/* wielowierszowy<br>komentarz */<br>console.log("Witaj, " + name + " " + surname);
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+    <script>
+        w3CodeColor();
+    </script>
+</body>
+
+</html>
