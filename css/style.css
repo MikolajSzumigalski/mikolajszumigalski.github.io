@@ -7,7 +7,6 @@
 }
 .chess{
     width: 400px;
-    float: right;
 }
 body, html{
     color: white;
@@ -19,17 +18,14 @@ body, html{
 
 }
 .volley{
-    float: right;
     padding-left: 15px;
     width: 200px;
 }
 .chris{
-    float: left;
     padding-right: 15px;
     width: 200px;
 }
 .gandd{
-    float: left;
     width: 250px;
 }
 #logo2{
