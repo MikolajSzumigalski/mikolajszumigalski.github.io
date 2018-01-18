@@ -21,14 +21,17 @@ body, html{
 .volley{
     float: right;
     padding-left: 15px;
-    width: 130px;
+    width: 200px;
 }
 .chris{
     float: left;
     padding-right: 15px;
-    width: 100px;
+    width: 200px;
 }
-
+.gandd{
+    float: left;
+    width: 250px;
+}
 #logo2{
     background-size: 50%;    
 }
@@ -82,13 +85,14 @@ h1{
     padding: 20px;
 }
 p{
- font-size: 120%;   
+ font-size: 120%;  
+ padding: 15px;
 }
 article{
     background-color: black;
     opacity: 0.9;
-    padding: 30px;
     border-radius: 10px;
+    padding: 15px;
 }
 a{
     text-decoration: none;
