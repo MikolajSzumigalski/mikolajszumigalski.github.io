@@ -5,13 +5,9 @@
     <meta charset="UTF-8" />
     <title>Witaj na stronie Mikołaja Szumigalskiego!</title>
     <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
-    <!-- Latest compiled and minified CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="Stylesheet" type="text/css" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
@@ -20,49 +16,70 @@
 <body>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html">Strona Główna</a></li>
-                <li><a href="Omnie.html">O mnie</a></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Uczelnia<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="WRP.html">WRP</a></li>
-                        <li><a href="#">TAS</a></li>
-                    </ul>
-                </li>
-                <li><a href="chess.html">Szachy</a></li>
-                <li><a href="mainwarsztaty.html">Warsztaty Webowe</a></li>
-                <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">J. programowania<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="python.html">Python</a></li>
-                        <li><a href="scilab.html">Scilab</a></li>
-                        <li><a href="haskell.html">Haskell</a></li>
-                        <li><a href="java.html">Java</a></li>
-                        <li><a href="js.html">JS</a></li>
-                        <li><a href="c++.html">C++</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+                <a class="navbar-brand active" href="index.html">Strona Główna</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="Omnie.html">O mnie</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Uczelnia<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="WRP.html">WRP</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="chess.html">Szachy</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">J. programowania<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="python.html">Python</a></li>
+                            <li><a href="scilab.html">Scilab</a></li>
+                            <li><a href="haskell.html">Haskell</a></li>
+                            <li><a href="java.html">Java</a></li>
+                            <li><a href="js.html">JS</a></li>
+                            <li><a href="c++.html">C++</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="mainwarsztaty.html">Warsztaty Webowe</a></li>
+                    <li><a href="http://mikolajszumigalski.github.io/EnglishTime/">English Time</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
     <div class="container">
-        <img class="tlo img-responsive" src="img/tlo.jpg"/> 
-        <h1>Cześć</h1>
-        <div class="clock">
-            <span class="hand seconds animate"></span>
-            <span class="hand minutes animate"></span>
-            <span class="hand hours animate"></span>
-        </div>
-        <p>Witaj na mojej stronie. Znajdziesz tu informacje o tym czym się obecnie zajmuję, a także informacje o dotychczasowych osiągnięciach, umiejętnościach i zainteresowaniach
-        </p>
-        <p>Strona ma na celu przybliżyć w skrócie moją sylewetkę, ale jest również moim poligonem doświadczalnym na którym chcę testować nowinki związane z projektowaniem stron, dlatego treść, wygląd, a nawet charakter strony może dynamicznie się zmieniać. Jestem otwarty na wszelkie uwagi dotyczące strony.</p>
-        <h3>Kontakt</h3>
-        <p>Najłatwiej znaleźć mnie na <a href="https://www.facebook.com/szumigalski1">Facebooku</a></p>
-        <p>Ale często przeglądam też skrzynkę pocztową -<a href="mailto:m.szumigalski@op.pl"> m.szumigalski@op.pl</a></p>
-        <p>O kontakt telefoniczny do mnie proszę pytać mailowo, lub na Facebooku.</p>
-        
+        <img class="tlo img-responsive" src="img/tlo.jpg" />
+        <article>
+            <h1>Cześć</h1>
+            <div class="row">
+                <div class="col-sm-9">
+                    <p>Witaj na mojej stronie. Znajdziesz tu informacje o tym czym się obecnie zajmuję, a także informacje o dotychczasowych osiągnięciach, umiejętnościach i zainteresowaniach
+                    </p>
+                    <p>Strona ma na celu przybliżyć w skrócie moją sylewetkę, ale jest również moim poligonem doświadczalnym na którym chcę testować nowinki związane z projektowaniem stron, dlatego treść, wygląd, a nawet charakter strony może dynamicznie się zmieniać. Jestem otwarty na wszelkie uwagi dotyczące strony.</p>
+                </div>
+                <div class="col-sm-3">
+                    <div class="clock">
+                        <span class="hand seconds animate"></span>
+                        <span class="hand minutes animate"></span>
+                        <span class="hand hours animate"></span>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article>
+            <h3>Kontakt</h3>
+            <p>Najłatwiej znaleźć mnie na <a href="https://www.facebook.com/szumigalski1">Facebooku</a></p>
+            <p>Ale często przeglądam też skrzynkę pocztową -<a href="mailto:m.szumigalski@op.pl"> m.szumigalski@op.pl</a></p>
+            <p>O kontakt telefoniczny do mnie proszę pytać mailowo, lub na Facebooku.</p>
+        </article>
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 <footer>

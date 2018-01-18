@@ -13,8 +13,7 @@ body, html{
     color: white;
     font-family: 'Cabin', sans-serif;
     margin: 0;
-    background: linear-gradient(black, #060627);
-    background-repeat:no-repeat;
+    background-image: url(/img/wall.png);
     width: 100%;
     min-height: 100%;
 
@@ -45,7 +44,7 @@ h1, h3{
     color: yellow;
 }
 
-ul{
+/*ul{
     margin: 0px;
     padding: 0px;
     list-style: none;
@@ -78,12 +77,18 @@ ul li ul li{
 ul li:hover ul li{
     display: block;
     width: 100%;
-}
+}*/
 h1{
     padding: 20px;
 }
 p{
  font-size: 120%;   
+}
+article{
+    background-color: black;
+    opacity: 0.9;
+    padding: 30px;
+    border-radius: 10px;
 }
 a{
     text-decoration: none;
